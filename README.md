@@ -8,6 +8,12 @@ This repository only serves the point of providing access to the method signatur
 </h3>
 <hr>
 
+## 📦 Packages
+You can find an overview of all packages here:<br>
+https://github.com/LoneDev6/ItemsAdder-API/packages/
+
+Alternatively you can directly reference this library using [Maven](#developer-reference-maven) or [Gradle](#developer-reference-gradle) by following the instructions outlined below.
+
 ### Developer reference (Maven)
 To build your project against this library, simply include this in your `pom.xml`:
 
