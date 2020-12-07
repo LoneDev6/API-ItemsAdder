@@ -19,7 +19,7 @@
     <!-- A reference to our Issues Tracker -->
     <issueManagement>
         <system>GitHub Issues</system>
-        <url>https://github.com/TheBusyBiscuit/ItemsAdder/issues</url>
+        <url>https://github.com/LoneDev6/ItemsAdder/issues</url>
     </issueManagement>
 
     <repositories>
@@ -33,7 +33,7 @@
         <repository>
             <id>github</id>
             <name>GitHub Packages</name>
-            <url>https://maven.pkg.github.com/LoneDev6/ItemsAdder-API</url>
+            <url>https://maven.pkg.github.com/TheBusyBiscuit/ItemsAdder-API</url>
         </repository>
     </distributionManagement>
 
