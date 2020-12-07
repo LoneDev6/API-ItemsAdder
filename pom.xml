@@ -29,6 +29,14 @@
         </repository>
     </repositories>
 
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/LoneDev6/ItemsAdder-API</url>
+        </repository>
+    </distributionManagement>
+
     <build>
         <sourceDirectory>${project.basedir}/src/main/java</sourceDirectory>
         <defaultGoal>clean package</defaultGoal>
