@@ -55,4 +55,16 @@ public final class ItemsAdder {
         throw new NotActuallyItemsAdderException();
     }
 
+    /**
+     * This returns the custom {@link ItemStack} for a given name.
+     * 
+     * @param nameInConfig
+     *            The name of that custom item (as written in the config)
+     * 
+     * @return The corresponding {@link ItemStack} (or null)
+     */
+    public static ItemStack getCustomItem(String nameInConfig) {
+        throw new NotActuallyItemsAdderException();
+    }
+
 }
