@@ -75,12 +75,18 @@
         </plugins>
     </build>
 
-    <!-- Our dependencies (Only Spigot 1.14.4 as of now) -->
+    <!-- Our dependencies -->
     <dependencies>
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
             <version>1.14.4-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>20.1.0</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
