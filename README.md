@@ -25,7 +25,7 @@ In your **<repositories>** section:
 </repository>
 ```
 
-In your **<dependencies>** section (Replace `VERSION` with the latest release of this repository):
+In your **<dependencies>** section (Replace `VERSION` with the [latest release](https://github.com/LoneDev6/ItemsAdder-API/packages?ecosystem=maven) of this package):
 ```xml
 <dependency>
     <groupId>dev.lone</groupId>
