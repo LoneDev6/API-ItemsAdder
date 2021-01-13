@@ -1,11 +1,11 @@
 package dev.lone.itemsadder.api;
 
-import org.bukkit.Location;
-import org.bukkit.Material;
+import org.bukkit.*;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
 import org.bukkit.block.data.BlockData;
 import org.bukkit.entity.Entity;
+import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.HashMap;
@@ -164,4 +164,19 @@ public class ItemsAdder
         throw new NotActuallyItemsAdderException();
     }
 
+    /**
+     * Play totem animation.
+     * Warning: make sure to delay it using a bukkit runnable (1 tick should be ok)
+     * if you call this after you close an inventory or sometimes animation won't show.
+     *
+     * Returns true if successful, returns false if the totem namespacedid is not valid.
+     *
+     * @param player
+     * @param namespacedId
+     * @return
+     */
+    public static boolean playTotemAnimation(Player player, String namespacedId)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
 }
