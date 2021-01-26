@@ -106,3 +106,12 @@ dependencies {
 }
 ```
 
+---
+
+# Examples
+
+## GUI
+https://github.com/LoneDev6/API-ItemsAdder-Example-GUI
+
+## Complex HUDs usage (ServerMonitor)
+https://github.com/LoneDev6/API-ItemsAdder-Example-ServerMonitor
