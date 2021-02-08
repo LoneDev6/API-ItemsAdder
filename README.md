@@ -6,7 +6,7 @@ This repository only serves the point of providing access to the method signatur
 <h3 align="center">
 <a href="https://itemsadder.plugin.ga/developers/java-api">☕ Java documentation</a> | <a href="https://itemsadder.plugin.ga/developers/skript-api">📓 Skript documentation</a>
 </h3>
-<hr>
+<hr> 
 
 ## 📦 Packages
 You can find an overview of all packages here:<br>
