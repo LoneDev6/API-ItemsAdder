@@ -10,7 +10,7 @@ This repository only serves the point of providing access to the method signatur
 
 ## 📦 Packages
 You can find an overview of all packages here:<br>
-https://github.com/LoneDev6/ItemsAdder-API/packages/
+https://github.com/LoneDev6/API-ItemsAdder/packages/
 
 Alternatively you can directly reference this library using [Maven](#developer-reference-maven) or [Gradle](#developer-reference-gradle) by following the instructions outlined below.
 
@@ -34,11 +34,11 @@ Add this to your **&lt;repositories&gt;** section:
 </repository>
 ```
 
-In your **&lt;dependencies&gt;** section (Replace `VERSION` with the [latest release](https://github.com/LoneDev6/ItemsAdder-API/packages?ecosystem=maven) of this package):
+In your **&lt;dependencies&gt;** section (Replace `VERSION` with the [latest release](https://github.com/LoneDev6/API-ItemsAdder/packages?ecosystem=maven) of this package):
 ```xml
 <dependency>
     <groupId>com.github.LoneDev6</groupId>
-    <artifactId>itemsadder-api</artifactId>
+    <artifactId>api-itemsadder</artifactId>
     <version>VERSION</version>
     <scope>provided</scope>
 </dependency>
@@ -50,22 +50,22 @@ Add this to your **&lt;repositories&gt;** section:
 ```xml
 <repository>
     <id>itemsadder-repo</id>
-    <url>https://maven.pkg.github.com/LoneDev6/ItemsAdder-API</url>
+    <url>https://maven.pkg.github.com/LoneDev6/API-ItemsAdder</url>
 </repository>
 ```
 
-In your **&lt;dependencies&gt;** section (Replace `VERSION` with the [latest release](https://github.com/LoneDev6/ItemsAdder-API/packages?ecosystem=maven) of this package):
+In your **&lt;dependencies&gt;** section (Replace `VERSION` with the [latest release](https://github.com/LoneDev6/API-ItemsAdder/packages?ecosystem=maven) of this package):
 ```xml
 <dependency>
     <groupId>dev.lone</groupId>
-    <artifactId>itemsadder-api</artifactId>
+    <artifactId>api-itemsadder</artifactId>
     <version>VERSION</version>
     <scope>provided</scope>
 </dependency>
 ```
 
 Note here that the GitHub package repository requires authentication! ([Read more](https://docs.github.com/en/free-pro-team@latest/packages/guides/configuring-apache-maven-for-use-with-github-packages#authenticating-to-github-packages))<br>
-Alternatively, you can also include the dependency using [jitpack.io](https://jitpack.io/#LoneDev6/ItemsAdder-API).
+Alternatively, you can also include the dependency using [jitpack.io](https://jitpack.io/#LoneDev6/API-ItemsAdder).
 
 ## Developer reference (Gradle)
 
@@ -74,20 +74,20 @@ Repository:
 ```
 repositories {
     maven {
-        url 'https://maven.pkg.github.com/LoneDev6/ItemsAdder-API'
+        url 'https://maven.pkg.github.com/LoneDev6/API-ItemsAdder'
     }
 }
 ```
 
-Artifact (Replace `VERSION` with the [latest release](https://github.com/LoneDev6/ItemsAdder-API/packages?ecosystem=maven) of this package):
+Artifact (Replace `VERSION` with the [latest release](https://github.com/LoneDev6/API-ItemsAdder/packages?ecosystem=maven) of this package):
 ```
 dependencies {
-    implementation 'dev.lone:itemsadder-api:VERSION'
+    implementation 'dev.lone:api-itemsadder:VERSION'
 }
 ```
 
 Note here that the GitHub package repository requires authentication! ([Read more](https://docs.github.com/en/free-pro-team@latest/packages/guides/configuring-apache-maven-for-use-with-github-packages#authenticating-to-github-packages))<br>
-Alternatively, you can also include the dependency using [jitpack.io](https://jitpack.io/#LoneDev6/ItemsAdder-API).
+Alternatively, you can also include the dependency using [jitpack.io](https://jitpack.io/#LoneDev6/API-ItemsAdder).
 
 ### 2. via `jitpack.io`
 Repository:
@@ -99,10 +99,10 @@ repositories {
 }
 ```
 
-Artifact (Replace `VERSION` with the [latest release](https://github.com/LoneDev6/ItemsAdder-API/packages?ecosystem=maven) of this package):
+Artifact (Replace `VERSION` with the [latest release](https://github.com/LoneDev6/API-ItemsAdder/packages?ecosystem=maven) of this package):
 ```
 dependencies {
-    implementation 'com.github.LoneDev6:ItemsAdder-API:VERSION'
+    implementation 'com.github.LoneDev6:API-ItemsAdder:VERSION'
 }
 ```
 
