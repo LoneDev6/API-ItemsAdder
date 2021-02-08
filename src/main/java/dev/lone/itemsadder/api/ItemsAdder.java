@@ -7,6 +7,7 @@ import org.bukkit.block.data.BlockData;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.HashMap;
 import java.util.List;
@@ -176,6 +177,19 @@ public class ItemsAdder
      * @return
      */
     public static boolean playTotemAnimation(Player player, String namespacedId)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    @Deprecated
+    public static void setLiquid(String namespacedID, Location location)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    @Deprecated
+    @Nullable
+    public static String getLiquidName(Location location)
     {
         throw new NotActuallyItemsAdderException();
     }
