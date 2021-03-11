@@ -1,5 +1,6 @@
 package dev.lone.itemsadder.api;
 
+import org.bukkit.Location;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.Nullable;
@@ -23,6 +24,7 @@ public class CustomStack
     /**
      * Gets a clone of the custom stack declared in ItemsAdder registry.
      * You can give this to a player and do whatever you want without overwriting the original item.
+     *
      * @param namespacedID
      * @return
      */
@@ -150,10 +152,9 @@ public class CustomStack
     /**
      * Complete list here: https://minecraft.gamepedia.com/Attribute#Attributes
      * The slot can be mainhand, offhand, head, chest, legs or feet.
-     *
-     *
+     * <p>
+     * <p>
      * Example: item.setAttributeModifier("attack_damage", "mainhand", 10d);
-     *
      *
      * @param attributeModifier
      * @param slotStr
@@ -181,6 +182,7 @@ public class CustomStack
 
     /**
      * Use this if you change attack damage of the item (via enchant or attribute modifier)
+     *
      * @param slot
      */
     public void updateAttackDamageLore(String slot)
@@ -190,6 +192,7 @@ public class CustomStack
 
     /**
      * Use this if you change attack speed of the item
+     *
      * @param slot
      */
     public void updateAttackSpeedLore(String slot)
@@ -198,6 +201,11 @@ public class CustomStack
     }
 
     public boolean isBlock()
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    public boolean drop(Location loc)
     {
         throw new NotActuallyItemsAdderException();
     }

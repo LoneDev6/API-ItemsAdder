@@ -2,13 +2,39 @@ package dev.lone.itemsadder.api;
 
 import org.bukkit.Location;
 import org.bukkit.block.Block;
+import org.bukkit.block.data.BlockData;
 import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class CustomBlock
+public class CustomBlock extends CustomStack
 {
+    /**
+     * Gets a clone of the custom stack declared in ItemsAdder registry.
+     * You can give this to a player and do whatever you want without overwriting the original item.
+     *
+     * @param namespacedID
+     * @return
+     */
+    @Nullable
+    public static CustomBlock getInstance(String namespacedID)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    /**
+     * Returns null if the provided {@ItemStack} is not a custom item created with ItemsAdder
+     *
+     * @param itemStack
+     * @return
+     */
+    @Nullable
+    public static CustomBlock byItemStack(ItemStack itemStack)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
     @Nullable
     public static CustomBlock place(String namespacedId, Location location)
     {
@@ -23,6 +49,7 @@ public class CustomBlock
 
     /**
      * Returns true if removed and false if not removed (not a custom block)
+     *
      * @param location
      * @return
      */
@@ -31,18 +58,14 @@ public class CustomBlock
         throw new NotActuallyItemsAdderException();
     }
 
-    /**
-     * Returns true if removed and false if not removed (not a custom block)
-     * @param
-     * @return
-     */
-    public boolean remove()
+    public BlockData generateBlockData()
     {
         throw new NotActuallyItemsAdderException();
     }
 
     /**
      * Gets the Bukkit Block
+     *
      * @return
      */
     public Block getBlock()
@@ -50,7 +73,28 @@ public class CustomBlock
         throw new NotActuallyItemsAdderException();
     }
 
-    public CustomStack getCustomStack()
+    /**
+     * Checks if this CustomBlock instance is in the world or not.
+     *
+     * @return
+     */
+    public boolean isPlaced()
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    public CustomBlock place(Location location)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    /**
+     * Returns true if removed and false if not removed (not a custom block)
+     *
+     * @param
+     * @return
+     */
+    public boolean remove()
     {
         throw new NotActuallyItemsAdderException();
     }
