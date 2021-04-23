@@ -193,4 +193,9 @@ public class ItemsAdder
     {
         throw new NotActuallyItemsAdderException();
     }
+
+    public static void applyResourcepack(Player player)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
 }

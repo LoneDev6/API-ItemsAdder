@@ -6,12 +6,11 @@ import org.bukkit.event.HandlerList;
 import org.jetbrains.annotations.NotNull;
 
 /**
- * Please use the other event (this one will work anyway)
+ * Async event called when ItemsAdder has finished loading all its stuff.
  */
-@Deprecated
-public class ItemsAdderFirstLoadEvent extends Event
+public class ItemsAdderLoadDataEvent extends Event
 {
-    public ItemsAdderFirstLoadEvent()
+    public ItemsAdderLoadDataEvent(boolean isReload)
     {
         throw new NotActuallyItemsAdderException();
     }
@@ -28,13 +27,14 @@ public class ItemsAdderFirstLoadEvent extends Event
         throw new NotActuallyItemsAdderException();
     }
 
-    public String getMessage()
+    public Cause getCause()
     {
         throw new NotActuallyItemsAdderException();
     }
 
-    public void setMessage(String message)
+    public enum Cause
     {
-        throw new NotActuallyItemsAdderException();
+        FIRST_LOAD,
+        RELOAD
     }
 }
