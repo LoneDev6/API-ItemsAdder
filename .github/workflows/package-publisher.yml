@@ -16,7 +16,8 @@ jobs:
     - name: Set up JDK 1.8
       uses: actions/setup-java@master
       with:
-        java-version: 1.8
+        distribution: 'zulu'
+        java-version: 8
     - name: Publish Maven package
       run: mvn -B deploy
       env:
