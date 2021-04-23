@@ -75,7 +75,7 @@
         </plugins>
     </build>
 
-    <!-- Our dependencies -->
+    <!-- Our dependencies --> 
     <dependencies>
         <dependency>
             <groupId>org.spigotmc</groupId>
