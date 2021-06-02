@@ -4,7 +4,7 @@ This repository only serves the point of providing access to the method signatur
 
 <hr>
 <h3 align="center">
-<a href="https://itemsadder.plugin.ga/developers/java-api">☕ Java documentation</a> | <a href="https://itemsadder.plugin.ga/developers/skript-api">📓 Skript documentation</a>
+<a href="https://itemsadder.devs.beer/developers/java-api">☕ Java documentation</a> | <a href="https://itemsadder.devs.beer/developers/skript-api">📓 Skript documentation</a>
 </h3>
 <hr> 
 
