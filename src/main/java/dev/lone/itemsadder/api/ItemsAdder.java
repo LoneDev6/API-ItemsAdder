@@ -198,4 +198,31 @@ public class ItemsAdder
     {
         throw new NotActuallyItemsAdderException();
     }
+
+    /**
+     * Returns all the registered items.
+     * @return null if ItemsAdder is not loaded completely, be sure to listen to ItemsAdderFirstLoadEvent
+     */
+    public static List<CustomStack> getAllItems()
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    /**
+     * Returns all the registered items by a specific namespace.
+     * @return null if ItemsAdder is not loaded completely, be sure to listen to ItemsAdderFirstLoadEvent
+     */
+    public static List<CustomStack> getAllItems(String namespace)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    /**
+     * Returns all the registered items which use a specific Bukkit Material.
+     * @return null if ItemsAdder is not loaded completely, be sure to listen to ItemsAdderFirstLoadEvent
+     */
+    public static List<CustomStack> getAllItems(Material material)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
 }
