@@ -229,14 +229,11 @@ public class CustomStack
     }
     
     /**
-     * TODO: What is this for?
-     * 
-     * @param  amount
-     *         Amount description // TODO: Add proper amount description for getUsages(int)
+     * Gets the amount of usages for this CustomStack.
      * 
      * @return Integer representing the amount of usages remaining.
      */
-    public Integer getUsages(int amount)
+    public Integer getUsages()
     {
         throw new NotActuallyItemsAdderException();
     }
@@ -343,7 +340,7 @@ public class CustomStack
      * Use this if you change attack damage of the item (via enchant or attribute modifier)
      *
      * @param slot
-     *        TODO: What is slot actually? Specific value, or completely free name?
+     *        The slot to apply the String to. Can be mainhand, offhand, head, chest, legs or feet.
      */
     public void updateAttackDamageLore(String slot)
     {
@@ -354,7 +351,7 @@ public class CustomStack
      * Use this if you change attack speed of the item
      *
      * @param slot
-     *        TODO: What is slot actually? Specific value, or completely free name?
+     *        The slot to apply the String to. Can be mainhand, offhand, head, chest, legs or feet.
      */
     public void updateAttackSpeedLore(String slot)
     {
