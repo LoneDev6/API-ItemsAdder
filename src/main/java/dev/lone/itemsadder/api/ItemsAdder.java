@@ -167,14 +167,15 @@ public class ItemsAdder
 
     /**
      * Play totem animation.
-     * Warning: make sure to delay it using a bukkit runnable (1 tick should be ok)
+     * <br>Warning: Make sure to delay it using a bukkit runnable (1 tick should be ok)
      * if you call this after you close an inventory or sometimes animation won't show.
      *
-     * Returns true if successful, returns false if the totem namespacedid is not valid.
-     *
-     * @param player
-     * @param namespacedId
-     * @return
+     * @param  player
+     *         The player to play the anomation towards.
+     * @param  namespacedId
+     *         The ID in the format {@code namespace:id} to get the totem animation from.
+     * 
+     * @return True if successfull, false when provided ID was invalid.
      */
     public static boolean playTotemAnimation(Player player, String namespacedId)
     {
@@ -193,7 +194,13 @@ public class ItemsAdder
     {
         throw new NotActuallyItemsAdderException();
     }
-
+    
+    /**
+     * Applies the Resource pack set for ItemsAdder to the provided player.
+     * 
+     * @param player
+     *        The player to apply the resource pack to.
+     */
     public static void applyResourcepack(Player player)
     {
         throw new NotActuallyItemsAdderException();

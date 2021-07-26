@@ -6,7 +6,8 @@ import org.bukkit.event.HandlerList;
 import org.jetbrains.annotations.NotNull;
 
 /**
- * Please use the other event (this one will work anyway)
+ * Please use the {@link ItemsAdderLoadDataEvent} to know if ItemsAdder is ready.
+ * <br>This event may still work, but could be removed in the future.
  */
 @Deprecated
 public class ItemsAdderFirstLoadEvent extends Event
