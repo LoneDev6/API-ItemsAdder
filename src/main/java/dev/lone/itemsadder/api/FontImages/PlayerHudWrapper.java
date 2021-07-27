@@ -1,26 +1,33 @@
 package dev.lone.itemsadder.api.FontImages;
 
 import dev.lone.itemsadder.api.NotActuallyItemsAdderException;
-import org.bukkit.entity.Player;
 
-public class PlayerHUDsHolderWrapper
+public class PlayerHudWrapper
 {
-    public PlayerHUDsHolderWrapper(Player player)
+    public PlayerHudWrapper(PlayerHudsHolderWrapper playerHUDsHolderWrapper, String namespacedID)
     {
         throw new NotActuallyItemsAdderException();
     }
 
+    /**
+     * Gets the internal ItemsAdder object. Should only be used by the plugin developer.
+     */
     public Object getInternal()
     {
         throw new NotActuallyItemsAdderException();
     }
 
-    public Player getPlayer()
+    public String getNamespacedID()
     {
         throw new NotActuallyItemsAdderException();
     }
 
-    public void recalculateOffsets()
+    public boolean exists()
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    public void setVisible(boolean value)
     {
         throw new NotActuallyItemsAdderException();
     }

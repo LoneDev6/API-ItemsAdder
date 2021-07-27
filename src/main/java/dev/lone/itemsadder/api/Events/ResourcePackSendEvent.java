@@ -30,16 +30,30 @@ public class ResourcePackSendEvent extends PlayerEvent
         throw new NotActuallyItemsAdderException();
     }
 
+    /**
+     * Get url of the sent resourcepack.
+     *
+     * @return URL of the sent resourcepack.
+     */
     public String getUrl()
     {
         throw new NotActuallyItemsAdderException();
     }
 
+    /**
+     * Get hash of the sent resourcepack.
+     *
+     * @return Hash of the sent resourcepack.
+     */
     public String getHash()
     {
         throw new NotActuallyItemsAdderException();
     }
 
+    /**
+     * Get if it's the ItemsAdder resourcepack or another plugin tried to set its own resourcepack.
+     * @return True if it's the ItemsAdder resourcepack. False if another plugin tried to set its own resourcepack.
+     */
     public boolean isItemsAdderPack()
     {
         throw new NotActuallyItemsAdderException();
