@@ -27,11 +27,19 @@ public class ItemsAdderLoadDataEvent extends Event
         throw new NotActuallyItemsAdderException();
     }
 
+    /**
+     * Cause of this load event.
+     *
+     * @return The cause of this load event.
+     */
     public Cause getCause()
     {
         throw new NotActuallyItemsAdderException();
     }
 
+    /**
+     * Reason why {@link ItemsAdderLoadDataEvent} event was called
+     */
     public enum Cause
     {
         FIRST_LOAD,

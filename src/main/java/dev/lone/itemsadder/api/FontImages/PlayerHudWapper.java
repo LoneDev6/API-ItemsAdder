@@ -9,6 +9,9 @@ public class PlayerHudWapper
         throw new NotActuallyItemsAdderException();
     }
 
+    /**
+     * Gets the internal ItemsAdder object. Should only be used by the plugin developer.
+     */
     public Object getInternal()
     {
         throw new NotActuallyItemsAdderException();

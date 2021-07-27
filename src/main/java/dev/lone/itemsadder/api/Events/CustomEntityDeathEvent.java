@@ -7,6 +7,9 @@ import org.bukkit.event.HandlerList;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+/**
+ * Event called when a custom entity is killed.
+ */
 public class CustomEntityDeathEvent extends Event
 {
     public CustomEntityDeathEvent(Entity entity, Object internal)
@@ -26,16 +29,31 @@ public class CustomEntityDeathEvent extends Event
         throw new NotActuallyItemsAdderException();
     }
 
+    /**
+     * Gets the Namespace and ID in the format {@code namespace:id} for this CustomMob.
+     *
+     * @return String representing the namespace and ID of the CustomMob.
+     */
     public String getNamespacedID()
     {
         throw new NotActuallyItemsAdderException();
     }
 
+    /**
+     * Gets the Bukkit Entity associated with this CustomMob.
+     *
+     * @return The Bukkit Entity associated with the CustomMob.
+     */
     public Entity getEntity()
     {
         throw new NotActuallyItemsAdderException();
     }
 
+    /**
+     * Gets the Bukkit Entity which killed the CustomMob.
+     *
+     * @return Possibly-null Bukkit Entity, it's very unlikely to be tho. It happens only if the CustomMob is misconfigured.
+     */
     @Nullable
     public Entity getKiller()
     {

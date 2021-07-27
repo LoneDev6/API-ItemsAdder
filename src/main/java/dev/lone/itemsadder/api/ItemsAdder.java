@@ -14,151 +14,302 @@ import java.util.List;
 
 public class ItemsAdder
 {
+    /**
+     * Please listen to {@link dev.lone.itemsadder.api.Events.ItemsAdderLoadDataEvent} event instead.
+     */
     @Deprecated
     public static boolean areItemsLoaded()
     {
         throw new NotActuallyItemsAdderException();
     }
 
+    /**
+     * Please use {@link CustomStack#byItemStack(ItemStack)} {@code != null} instead.
+     */
     @Deprecated
     public static boolean isCustomItem(ItemStack itemStack)
     {
         throw new NotActuallyItemsAdderException();
     }
 
+    /**
+     * Please use {@link CustomStack#getInstance(String)} {@code != null} instead.
+     */
     @Deprecated
     public static boolean isCustomItem(String customItemName)
     {
         throw new NotActuallyItemsAdderException();
     }
 
+    /**
+     * Please use {@link CustomStack#getInstance(String)} instead.
+     */
     @Deprecated
     public static ItemStack getCustomItem(String namespacedId)
     {
         throw new NotActuallyItemsAdderException();
     }
 
+    /**
+     * Please use {@link CustomBlock#place(Location)} instead.
+     */
     @Deprecated
     public static void placeCustomBlock(Location location, ItemStack itemStack)
     {
         throw new NotActuallyItemsAdderException();
     }
 
+    /**
+     * Please use {@link CustomBlock} instead.
+     */
     @Deprecated
     public static void removeCustomBlock(Location location)
     {
         throw new NotActuallyItemsAdderException();
     }
 
+    /**
+     * Please don't use this method anymore, it's not reliable as blocks are not only mushrooms.
+     *
+     * Get a custom block based on the {@link BlockFace} values.
+     * @param material
+     * @param blockFaces
+     * @return
+     */
     @Deprecated
     public static ItemStack getCustomBlockByFaces(Material material, HashMap<BlockFace, Boolean> blockFaces)
     {
         throw new NotActuallyItemsAdderException();
     }
 
+    /**
+     * Please use {@link CustomBlock} instead.
+     */
     @Deprecated
     public static boolean isCustomBlock(Block block)
     {
         throw new NotActuallyItemsAdderException();
     }
 
+    /**
+     * Please use {@link CustomBlock} instead.
+     */
     @Deprecated
     public static List<ItemStack> getCustomBlockLoot(Block block, boolean includeSelfBlock)
     {
         throw new NotActuallyItemsAdderException();
     }
 
+    /**
+     * Please use {@link CustomBlock} instead.
+     */
     @Deprecated
     public static List<ItemStack> getCustomBlockLoot(Block block)
     {
         throw new NotActuallyItemsAdderException();
     }
 
+    /**
+     * Please use {@link CustomBlock} instead.
+     */
     @Deprecated
     public static List<ItemStack> getCustomBlockLoot(Block block, ItemStack tool, boolean includeSelfBlock)
     {
         throw new NotActuallyItemsAdderException();
     }
 
+    /**
+     * Please use {@link CustomCrop} instead.
+     */
     @Deprecated
     public static void placeCustomCrop(Location location, ItemStack seed)//TODO: not tested
     {
         throw new NotActuallyItemsAdderException();
     }
 
+    /**
+     * Please use {@link CustomCrop} instead.
+     */
     @Deprecated
     public static boolean isCustomCrop(Block block)
     {
         throw new NotActuallyItemsAdderException();
     }
 
+    /**
+     * Please use {@link CustomCrop} instead.
+     */
     @Deprecated
     public static String getCustomSeedNameFromCrop(Block block)
     {
         throw new NotActuallyItemsAdderException();
     }
 
+    /**
+     * Please use {@link CustomBlock} instead.
+     *
+     * Gets a CustomBlock instance through the provided Bukkit Block.
+     * <br>This may return null if the provided Block is not associated with a CustomBlock.
+     *
+     * @param block
+     *        The Bukkit Block to get the CustomBlock from.
+     *
+     * @return Possibly-null CustomBlock instance.
+     */
     @Deprecated
     public static ItemStack getCustomBlock(Block block)
     {
         throw new NotActuallyItemsAdderException();
     }
 
+    /**
+     * Please use {@link CustomStack} instead.
+     *
+     * Returns whether the namespace and id of the provided CustomStack match the one of this CustomStack.
+     *
+     * @param itemStack
+     *        The CustomStack to check the namespace and id against.
+     *
+     * @param customItemName
+     *        The CustomStack ID in the format {@code namespace:id} to check the item namespaced ID against.
+     *
+     * @return True if namespace and id match, otherwise false.
+     */
     @Deprecated
     public static boolean matchCustomItemName(ItemStack itemStack, String customItemName)
     {
         throw new NotActuallyItemsAdderException();
     }
 
+    /**
+     * Please use {@link CustomFurniture} instead.
+     *
+     * Check if a Bukkit {@link Entity} is a custom furniture.
+     *
+     * @param entity
+     *        The {@link Bukkit} entity.
+     *
+     * @return True if it's a custom entity, false if not.
+     */
     @Deprecated
     public static boolean isFurniture(Entity entity)
     {
         throw new NotActuallyItemsAdderException();
     }
 
+    /**
+     * Please use {@link CustomStack} instead.
+     *
+     * Gets the namespace and id of this CustomStack instance in the format {@code namespace:id}
+     * 
+     * @param itemStack 
+     *        Custom item.
+     * 
+     * @return String representing namespace and id of the custom item.
+     */
     @Deprecated
     public static String getCustomItemName(ItemStack itemStack)
     {
         throw new NotActuallyItemsAdderException();
     }
 
-
+    /**
+     * Please use {@link CustomStack} instead.
+     *
+     * Get custom usages of a custom item. (Usages is a special property of this plugin. It's not a Vanilla attribute)
+     * @param itemStack
+     *        Custom item.
+     *
+     * @return Custom durability of a custom item.
+     */
     @Deprecated
     public static int getCustomItemUsages(ItemStack itemStack)
     {
         throw new NotActuallyItemsAdderException();
     }
 
+    /**
+     * Please use {@link CustomStack} instead.
+     *
+     * Set the custom durability of a custom item.
+     * @param item
+     *        Custom item.
+     * @param durability
+     *        Durability to set.
+     *
+     * @return The modified ItemStack.
+     */
     @Deprecated
     public static ItemStack setCustomItemDurability(ItemStack item, int durability)
     {
         throw new NotActuallyItemsAdderException();
     }
 
+    /**
+     * Please use {@link CustomStack} instead.
+     *
+     * Get the custom durability of a custom item.
+     * @param itemStack
+     *        Custom item.
+     * @return Custom durability of a custom item.
+     */
     @Deprecated
     public static int getCustomItemDurability(ItemStack itemStack)
     {
         throw new NotActuallyItemsAdderException();
     }
 
+    /**
+     * Please use {@link CustomStack} instead.
+     *
+     * Get the custom max durability of a custom item.
+     * @param itemStack
+     *        Custom item.
+     * @return Custom max durability of a custom item.
+     */
     @Deprecated
     public static int getCustomItemMaxDurability(ItemStack itemStack)
     {
         throw new NotActuallyItemsAdderException();
     }
 
+    /**
+     * Get list of custom blocks IDs in the format {@code namespace:id} which contains the {@code searchStr} keyword.
+     *
+     * @param searchStr
+     *        Keyword to search for.
+     *
+     * @return Complete list of custom blocks IDs in the format {@code namespace:id}.
+     */
     @Deprecated
     public static List<String> getNamespacedBlocksNamesInConfig(String searchStr)
     {
         throw new NotActuallyItemsAdderException();
     }
 
+    /**
+     * Get complete list of custom blocks IDs in the format {@code namespace:id}.
+     *
+     * @return Complete list of custom blocks IDs in the format {@code namespace:id}.
+     */
     @Deprecated
     public static List<String> getNamespacedBlocksNamesInConfig()
     {
         throw new NotActuallyItemsAdderException();
     }
 
+    /**
+     * Please use {@link CustomStack} instead.
+     *
+     * Get the Bukkit {@link BlockData}
+     *
+     * @param customBlock
+     *        The ItemStack of the custom block you want to get Bukkit {@link BlockData} of.
+     * @param lightweight
+     *        Unused property.
+     *
+     * @return Bukkit {@link BlockData}
+     */
     @Deprecated
     public static BlockData getCustomBlockBlockData(ItemStack customBlock, boolean lightweight)
     {
@@ -175,19 +326,35 @@ public class ItemsAdder
      * @param  namespacedId
      *         The ID in the format {@code namespace:id} to get the totem animation from.
      * 
-     * @return True if successfull, false when provided ID was invalid.
+     * @return True if successful, false when provided ID was invalid.
      */
     public static boolean playTotemAnimation(Player player, String namespacedId)
     {
         throw new NotActuallyItemsAdderException();
     }
 
+    /**
+     * Place a custom liquid in the specified location.
+     *
+     * @param namespacedID
+     *        The ID in the format {@code namespace:id} of the liquid you want to place.
+     * @param location
+     *        Location of where you want to place the liquid
+     */
     @Deprecated
     public static void setLiquid(String namespacedID, Location location)
     {
         throw new NotActuallyItemsAdderException();
     }
 
+    /**
+     * Get the name of the liquid in this location.
+     *
+     * @param location
+     *        Location you want to check.
+     *
+     * @return null if no custom liquid is available in the location.
+     */
     @Deprecated
     @Nullable
     public static String getLiquidName(Location location)
@@ -208,7 +375,8 @@ public class ItemsAdder
 
     /**
      * Returns all the registered items.
-     * @return null if ItemsAdder is not loaded completely, be sure to listen to ItemsAdderFirstLoadEvent
+     *
+     * @return null if ItemsAdder is not loaded completely, be sure to listen to ItemsAdderLoadDataEvent
      */
     public static List<CustomStack> getAllItems()
     {
@@ -217,7 +385,7 @@ public class ItemsAdder
 
     /**
      * Returns all the registered items by a specific namespace.
-     * @return null if ItemsAdder is not loaded completely, be sure to listen to ItemsAdderFirstLoadEvent
+     * @return null if ItemsAdder is not loaded completely, be sure to listen to ItemsAdderLoadDataEvent
      */
     public static List<CustomStack> getAllItems(String namespace)
     {
@@ -226,7 +394,7 @@ public class ItemsAdder
 
     /**
      * Returns all the registered items which use a specific Bukkit Material.
-     * @return null if ItemsAdder is not loaded completely, be sure to listen to ItemsAdderFirstLoadEvent
+     * @return null if ItemsAdder is not loaded completely, be sure to listen to ItemsAdderLoadDataEvent
      */
     public static List<CustomStack> getAllItems(Material material)
     {
