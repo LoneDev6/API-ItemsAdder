@@ -1,14 +1,10 @@
 package dev.lone.itemsadder.api.FontImages;
 
 import dev.lone.itemsadder.api.NotActuallyItemsAdderException;
-import org.bukkit.entity.Player;
 
-/**
- * Class representing a container which holds all HUDs of a player.
- */
-public class PlayerHUDsHolderWrapper
+public class PlayerHudWrapper
 {
-    public PlayerHUDsHolderWrapper(Player player)
+    public PlayerHudWrapper(PlayerHudsHolderWrapper playerHUDsHolderWrapper, String namespacedID)
     {
         throw new NotActuallyItemsAdderException();
     }
@@ -21,19 +17,17 @@ public class PlayerHUDsHolderWrapper
         throw new NotActuallyItemsAdderException();
     }
 
-    /**
-     * Get owner of this holder.
-     * @return Owner of this holder.
-     */
-    public Player getPlayer()
+    public String getNamespacedID()
     {
         throw new NotActuallyItemsAdderException();
     }
 
-    /**
-     * Force the recalculation the offsets if you shown a new HUD, added/removed new font images to a {@link PlayerCustomHUDWrapper} HUD.
-     */
-    public void recalculateOffsets()
+    public boolean exists()
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    public void setVisible(boolean value)
     {
         throw new NotActuallyItemsAdderException();
     }

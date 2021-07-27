@@ -116,8 +116,9 @@ public class CustomStack
     /**
      * Gets the permission associated with this CustomStack.
      * 
-     * @return String representing the permission for this CustomStack.
+     * @return Possibly-null String representing the permission for this CustomStack.
      */
+    @Nullable
     public String getPermission()
     {
         throw new NotActuallyItemsAdderException();
@@ -233,7 +234,7 @@ public class CustomStack
      * 
      * @return Integer representing the amount of usages remaining.
      */
-    public Integer getUsages()
+    public int getUsages()
     {
         throw new NotActuallyItemsAdderException();
     }
@@ -253,7 +254,7 @@ public class CustomStack
      * 
      * @return Integer representing the current durability of the CustomStack.
      */
-    public Integer getDurability()
+    public int getDurability()
     {
         throw new NotActuallyItemsAdderException();
     }

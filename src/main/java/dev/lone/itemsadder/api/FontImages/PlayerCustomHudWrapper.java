@@ -6,9 +6,10 @@ import dev.lone.itemsadder.api.NotActuallyItemsAdderException;
 import java.util.List;
 
 /**
- * Class representing a container for the custom HUD of a particular player.
+ * Class representing a container for the custom HUD of a particular player. Its textures are handled by the developer
+ * which is making use of this class.
  */
-public class PlayerCustomHUDWrapper extends PlayerQuantityHudWapper
+public class PlayerCustomHudWrapper extends PlayerQuantityHudWrapper
 {
     /**
      *
@@ -18,7 +19,7 @@ public class PlayerCustomHUDWrapper extends PlayerQuantityHudWapper
      * @param namespacedID
      *        Namespace and ID in the format {@code namespace:id} of the HUD.
      */
-    public PlayerCustomHUDWrapper(PlayerHUDsHolderWrapper playerHUDsHolderWrapper, String namespacedID)
+    public PlayerCustomHudWrapper(PlayerHudsHolderWrapper playerHUDsHolderWrapper, String namespacedID)
     {
         super(playerHUDsHolderWrapper, namespacedID);
         throw new NotActuallyItemsAdderException();
