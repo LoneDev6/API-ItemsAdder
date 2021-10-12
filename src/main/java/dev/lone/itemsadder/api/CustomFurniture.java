@@ -85,7 +85,7 @@ public class CustomFurniture extends CustomStack
      * @param dropItem
      *        If an item should be dropped.
      */
-    public static void remove(ArmorStand armorStand, boolean dropItem)
+    public static void remove(Entity armorStand, boolean dropItem)
     {
         throw new NotActuallyItemsAdderException();
     }
