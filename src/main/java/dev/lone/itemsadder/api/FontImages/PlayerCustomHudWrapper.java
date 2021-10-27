@@ -12,12 +12,11 @@ import java.util.List;
 public class PlayerCustomHudWrapper extends PlayerQuantityHudWrapper
 {
     /**
+     * Object representing a container for the custom HUD of a particular player. Its textures are handled by the developer
+     * which is making use of this object.
      *
-     * @param playerHUDsHolderWrapper
-     *        Object which holds all HUDs of a player.
-     *
-     * @param namespacedID
-     *        Namespace and ID in the format {@code namespace:id} of the HUD.
+     * @param playerHUDsHolderWrapper Object which holds all HUDs of a player.
+     * @param namespacedID            Namespace and ID in the format {@code namespace:id} of the HUD.
      */
     public PlayerCustomHudWrapper(PlayerHudsHolderWrapper playerHUDsHolderWrapper, String namespacedID)
     {
@@ -36,8 +35,7 @@ public class PlayerCustomHudWrapper extends PlayerQuantityHudWrapper
     /**
      * Set font images of this HUD overwriting the current ones.
      *
-     * @param fontImageWrappers
-     *        Font images to be set to this HUD overwriting the current ones.
+     * @param fontImageWrappers Font images to be set to this HUD overwriting the current ones.
      */
     public void setFontImages(List<FontImageWrapper> fontImageWrappers)
     {
@@ -47,8 +45,7 @@ public class PlayerCustomHudWrapper extends PlayerQuantityHudWrapper
     /**
      * Remove a font_image from this HUD at a particular index.
      *
-     * @param index
-     *        Index of the font_image.
+     * @param index Index of the font_image.
      */
     public void removeFontImageByIndex(int index)
     {
@@ -58,11 +55,8 @@ public class PlayerCustomHudWrapper extends PlayerQuantityHudWrapper
     /**
      * Adds a font_image to this HUD at a particular index.
      *
-     * @param fontImageWrapper
-     *        The font_image to add.
-     *
-     * @param index
-     *        Index of where to add the font_image.
+     * @param fontImageWrapper The font_image to add.
+     * @param index            Index of where to add the font_image.
      */
     public void addFontImageToIndex(FontImageWrapper fontImageWrapper, int index)
     {
@@ -72,8 +66,7 @@ public class PlayerCustomHudWrapper extends PlayerQuantityHudWrapper
     /**
      * Add a font_image at the end of this HUD.
      *
-     * @param fontImageWrapper
-     *        The font_image to add.
+     * @param fontImageWrapper The font_image to add.
      */
     public void addFontImage(FontImageWrapper fontImageWrapper)
     {

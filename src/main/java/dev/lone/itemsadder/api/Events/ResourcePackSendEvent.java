@@ -52,7 +52,8 @@ public class ResourcePackSendEvent extends PlayerEvent
 
     /**
      * Get if it's the ItemsAdder resourcepack or another plugin tried to set its own resourcepack.
-     * @return True if it's the ItemsAdder resourcepack. False if another plugin tried to set its own resourcepack.
+     *
+     * @return true if it's the ItemsAdder resourcepack. False if another plugin tried to set its own resourcepack.
      */
     public boolean isItemsAdderPack()
     {

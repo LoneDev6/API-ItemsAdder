@@ -1,6 +1,8 @@
 package dev.lone.itemsadder.api;
 
-import org.bukkit.*;
+import org.bukkit.Bukkit;
+import org.bukkit.Location;
+import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
 import org.bukkit.block.data.BlockData;
@@ -70,8 +72,9 @@ public class ItemsAdder
 
     /**
      * Please don't use this method anymore, it's not reliable as blocks are not only mushrooms.
-     *
+     * <p>
      * Get a custom block based on the {@link BlockFace} values.
+     *
      * @param material
      * @param blockFaces
      * @return
@@ -147,13 +150,11 @@ public class ItemsAdder
 
     /**
      * Please use {@link CustomBlock} instead.
-     *
+     * <p>
      * Gets a CustomBlock instance through the provided Bukkit Block.
      * <br>This may return null if the provided Block is not associated with a CustomBlock.
      *
-     * @param block
-     *        The Bukkit Block to get the CustomBlock from.
-     *
+     * @param block The Bukkit Block to get the CustomBlock from.
      * @return Possibly-null CustomBlock instance.
      */
     @Deprecated
@@ -164,16 +165,12 @@ public class ItemsAdder
 
     /**
      * Please use {@link CustomStack} instead.
-     *
+     * <p>
      * Returns whether the namespace and id of the provided CustomStack match the one of this CustomStack.
      *
-     * @param itemStack
-     *        The CustomStack to check the namespace and id against.
-     *
-     * @param customItemName
-     *        The CustomStack ID in the format {@code namespace:id} to check the item namespaced ID against.
-     *
-     * @return True if namespace and id match, otherwise false.
+     * @param itemStack      The CustomStack to check the namespace and id against.
+     * @param customItemName The CustomStack ID in the format {@code namespace:id} to check the item namespaced ID against.
+     * @return true if namespace and id match, otherwise false.
      */
     @Deprecated
     public static boolean matchCustomItemName(ItemStack itemStack, String customItemName)
@@ -183,13 +180,11 @@ public class ItemsAdder
 
     /**
      * Please use {@link CustomFurniture} instead.
-     *
+     * <p>
      * Check if a Bukkit {@link Entity} is a custom furniture.
      *
-     * @param entity
-     *        The {@link Bukkit} entity.
-     *
-     * @return True if it's a custom entity, false if not.
+     * @param entity The {@link Bukkit} entity.
+     * @return true if it's a custom entity, false if not.
      */
     @Deprecated
     public static boolean isFurniture(Entity entity)
@@ -199,12 +194,10 @@ public class ItemsAdder
 
     /**
      * Please use {@link CustomStack} instead.
-     *
+     * <p>
      * Gets the namespace and id of this CustomStack instance in the format {@code namespace:id}
-     * 
-     * @param itemStack 
-     *        Custom item.
-     * 
+     *
+     * @param itemStack Custom item.
      * @return String representing namespace and id of the custom item.
      */
     @Deprecated
@@ -215,11 +208,10 @@ public class ItemsAdder
 
     /**
      * Please use {@link CustomStack} instead.
-     *
+     * <p>
      * Get custom usages of a custom item. (Usages is a special property of this plugin. It's not a Vanilla attribute)
-     * @param itemStack
-     *        Custom item.
      *
+     * @param itemStack Custom item.
      * @return Custom durability of a custom item.
      */
     @Deprecated
@@ -230,13 +222,11 @@ public class ItemsAdder
 
     /**
      * Please use {@link CustomStack} instead.
-     *
+     * <p>
      * Set the custom durability of a custom item.
-     * @param item
-     *        Custom item.
-     * @param durability
-     *        Durability to set.
      *
+     * @param item       Custom item.
+     * @param durability Durability to set.
      * @return The modified ItemStack.
      */
     @Deprecated
@@ -247,10 +237,10 @@ public class ItemsAdder
 
     /**
      * Please use {@link CustomStack} instead.
-     *
+     * <p>
      * Get the custom durability of a custom item.
-     * @param itemStack
-     *        Custom item.
+     *
+     * @param itemStack Custom item.
      * @return Custom durability of a custom item.
      */
     @Deprecated
@@ -261,10 +251,10 @@ public class ItemsAdder
 
     /**
      * Please use {@link CustomStack} instead.
-     *
+     * <p>
      * Get the custom max durability of a custom item.
-     * @param itemStack
-     *        Custom item.
+     *
+     * @param itemStack Custom item.
      * @return Custom max durability of a custom item.
      */
     @Deprecated
@@ -276,9 +266,7 @@ public class ItemsAdder
     /**
      * Get list of custom blocks IDs in the format {@code namespace:id} which contains the {@code searchStr} keyword.
      *
-     * @param searchStr
-     *        Keyword to search for.
-     *
+     * @param searchStr Keyword to search for.
      * @return Complete list of custom blocks IDs in the format {@code namespace:id}.
      */
     @Deprecated
@@ -300,14 +288,11 @@ public class ItemsAdder
 
     /**
      * Please use {@link CustomStack} instead.
-     *
+     * <p>
      * Get the Bukkit {@link BlockData}
      *
-     * @param customBlock
-     *        The ItemStack of the custom block you want to get Bukkit {@link BlockData} of.
-     * @param lightweight
-     *        Unused property.
-     *
+     * @param customBlock The ItemStack of the custom block you want to get Bukkit {@link BlockData} of.
+     * @param lightweight Unused property.
      * @return Bukkit {@link BlockData}
      */
     @Deprecated
@@ -321,12 +306,9 @@ public class ItemsAdder
      * <br>Warning: Make sure to delay it using a bukkit runnable (1 tick should be ok)
      * if you call this after you close an inventory or sometimes animation won't show.
      *
-     * @param  player
-     *         The player to play the anomation towards.
-     * @param  namespacedId
-     *         The ID in the format {@code namespace:id} to get the totem animation from.
-     * 
-     * @return True if successful, false when provided ID was invalid.
+     * @param player       The player to play the anomation towards.
+     * @param namespacedId The ID in the format {@code namespace:id} to get the totem animation from.
+     * @return true if successful, false when provided ID was invalid.
      */
     public static boolean playTotemAnimation(Player player, String namespacedId)
     {
@@ -336,10 +318,8 @@ public class ItemsAdder
     /**
      * Place a custom liquid in the specified location.
      *
-     * @param namespacedID
-     *        The ID in the format {@code namespace:id} of the liquid you want to place.
-     * @param location
-     *        Location of where you want to place the liquid
+     * @param namespacedID The ID in the format {@code namespace:id} of the liquid you want to place.
+     * @param location     Location of where you want to place the liquid
      */
     @Deprecated
     public static void setLiquid(String namespacedID, Location location)
@@ -350,9 +330,7 @@ public class ItemsAdder
     /**
      * Get the name of the liquid in this location.
      *
-     * @param location
-     *        Location you want to check.
-     *
+     * @param location Location you want to check.
      * @return null if no custom liquid is available in the location.
      */
     @Deprecated
@@ -361,12 +339,11 @@ public class ItemsAdder
     {
         throw new NotActuallyItemsAdderException();
     }
-    
+
     /**
      * Applies the Resource pack set for ItemsAdder to the provided player.
-     * 
-     * @param player
-     *        The player to apply the resource pack to.
+     *
+     * @param player The player to apply the resource pack to.
      */
     public static void applyResourcepack(Player player)
     {
@@ -385,6 +362,7 @@ public class ItemsAdder
 
     /**
      * Returns all the registered items by a specific namespace.
+     *
      * @return null if ItemsAdder is not loaded completely, be sure to listen to ItemsAdderLoadDataEvent
      */
     public static List<CustomStack> getAllItems(String namespace)
@@ -394,6 +372,7 @@ public class ItemsAdder
 
     /**
      * Returns all the registered items which use a specific Bukkit Material.
+     *
      * @return null if ItemsAdder is not loaded completely, be sure to listen to ItemsAdderLoadDataEvent
      */
     public static List<CustomStack> getAllItems(Material material)

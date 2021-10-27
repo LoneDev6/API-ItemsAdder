@@ -3,14 +3,16 @@ package dev.lone.itemsadder.api.FontImages;
 import dev.lone.itemsadder.api.NotActuallyItemsAdderException;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
+import org.jetbrains.annotations.Nullable;
 
 /**
- * Class rapreseting ItemAdder custom images feature.
+ * Class representing ItemAdder custom images feature.
  */
 public class FontImageWrapper
 {
     /**
      * Get a wrapper for the internal font image of ItemsAdder.
+     *
      * @param namespacedID
      */
     public FontImageWrapper(String namespacedID)
@@ -21,9 +23,7 @@ public class FontImageWrapper
     /**
      * Static utility method to replace all the font images placeholders in a String.
      *
-     * @param string
-     *        String you want to get placeholders replaced.
-     *
+     * @param string String you want to get placeholders replaced.
      * @return String with placeholders replaced with unicode characters.
      */
     public static String replaceFontImages(String string)
@@ -34,13 +34,9 @@ public class FontImageWrapper
     /**
      * Static utility method to replace all the font images placeholders in a String.
      *
-     * @param player
-     *        Player to check permissions to use the placeholders.
-     *        Each placeholder permission is checked and it won't be replaced if the player has no permission to use it.
-     *
-     * @param string
-     *        String you want to get placeholders replaced.
-     *
+     * @param player Player to check permissions to use the placeholders.
+     *               Each placeholder permission is checked, and it won't be replaced if the player has no permission to use it.
+     * @param string String you want to get placeholders replaced.
      * @return String with placeholders replaced with unicode characters.
      */
     public static String replaceFontImages(Player player, String string)
@@ -52,13 +48,9 @@ public class FontImageWrapper
      * Shift a text/font image back or forward.
      * Useful to create complex HUDs or similar effects.
      *
-     * @param str
-     *        The String you want to apply the offset to.
-     *
-     * @param offset
-     *        Offset in pixels
-     *
-     * @return The modified String.
+     * @param str    the String you want to apply the offset to.
+     * @param offset int offset in pixels
+     * @return the modified String.
      */
     public static String applyPixelsOffsetToString(String str, int offset)
     {
@@ -68,6 +60,7 @@ public class FontImageWrapper
     /**
      * Gets the internal ItemsAdder object. Should only be used by the plugin developer.
      */
+    @Nullable
     public Object getInternal()
     {
         throw new NotActuallyItemsAdderException();
@@ -85,7 +78,8 @@ public class FontImageWrapper
 
     /**
      * Checks if the font_image exists in ItemsAdder registry.
-     * @return
+     *
+     * @return true if the font_image exists in ItemsAdder registry.
      */
     public boolean exists()
     {
@@ -94,6 +88,7 @@ public class FontImageWrapper
 
     /**
      * Get the color + font_image unicode character + {@code ChatColor.RESET}.
+     *
      * @return color + font_image unicode character + {@code ChatColor.RESET}.
      */
     public String getString()
@@ -125,11 +120,9 @@ public class FontImageWrapper
      * Get a copy of the font_image String with pixel offset applied to it.
      * Doesn't modify the original one.
      *
-     * @param offset
-     *        Offset in pixels.
-     *
+     * @param offset int offset in pixels.
      * @return A copy of the font_image String with pixel offset applied to it.
-     *         Doesn't modify the original one.
+     * Doesn't modify the original one.
      */
     public String applyPixelsOffset(int offset)
     {
@@ -149,8 +142,7 @@ public class FontImageWrapper
     /**
      * Set color of this wrapper.
      *
-     * @param color
-     *        Color to set.
+     * @param color Color to set.
      */
     public void setColor(ChatColor color)
     {

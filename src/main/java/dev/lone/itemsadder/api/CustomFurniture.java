@@ -15,10 +15,8 @@ public class CustomFurniture extends CustomStack
     /**
      * Gets a CustomFurniture instance from the provided Armor stand.
      * <br>This may return null if the Armor stand is not part of a furniture.
-     * 
-     * @param  armorStand
-     *         The Armor stand to get the CustomFurniture from.
-     * 
+     *
+     * @param armorStand The Armor stand to get the CustomFurniture from.
      * @return Possibly-null instance of CustomFurniture
      */
     @Nullable
@@ -30,14 +28,11 @@ public class CustomFurniture extends CustomStack
     /**
      * Spawns an Armor stand with the furniture of the provided namespace and ID at the provided location and
      * returns a CustomFurniture instance for it.
-     * 
+     *
      * <p><b>No Barrier block will be spawned if the CustomFurniture is solid!</b>
-     * 
-     * @param  namespacedId
-     *         Namespace and ID of the CustomFurniture in the format {@code namespace:id}
-     * @param  location
-     *         The Location to spawn the Armor stand with the furniture at.
-     * 
+     *
+     * @param namespacedId Namespace and ID of the CustomFurniture in the format {@code namespace:id}
+     * @param location     The Location to spawn the Armor stand with the furniture at.
      * @return Possibly-null CustomFurniture instance.
      */
     @Nullable
@@ -52,12 +47,9 @@ public class CustomFurniture extends CustomStack
      * <br>This may return null if the provided namespace and ID are invalid.
      *
      * <p><b>No Barrier block will be spawned if the CustomFurniture is solid!</b>
-     * 
-     * @param  namespacedId
-     *         Namespace and ID of the CustomFurniture in the format {@code namespace:id}
-     * @param  blockLocation
-     *         The Block to spawn the Armor stand with the furniture at.
-     * 
+     *
+     * @param namespacedId  Namespace and ID of the CustomFurniture in the format {@code namespace:id}
+     * @param blockLocation The Block to spawn the Armor stand with the furniture at.
      * @return Possibly-null CustomFurniture instance.
      */
     @Nullable
@@ -68,9 +60,8 @@ public class CustomFurniture extends CustomStack
 
     /**
      * Removes this CustomFurniture and the Armor stand associated with it from the world.
-     * 
-     * @param dropItem
-     *        If an item should be dropped.
+     *
+     * @param dropItem if an item should be dropped.
      */
     public void remove(boolean dropItem)
     {
@@ -79,11 +70,9 @@ public class CustomFurniture extends CustomStack
 
     /**
      * Removes this CustomFurniture and the Armor stand associated with it from the world.
-     * 
-     * @param armorStand
-     *        The Armor stand to remove with the CustomFurniture.
-     * @param dropItem
-     *        If an item should be dropped.
+     *
+     * @param armorStand the Armor stand to remove with the CustomFurniture.
+     * @param dropItem   if an item should be dropped.
      */
     public static void remove(Entity armorStand, boolean dropItem)
     {
@@ -93,9 +82,8 @@ public class CustomFurniture extends CustomStack
     /**
      * Teleports the Armor stand associated with this CustomFurniture to the target Bukkit Entity.
      * <br>This will also remove any Barrier blocks from its original position, if present.
-     * 
-     * @param destinationEntity
-     *        The Bukkit Entity to teleport towards.
+     *
+     * @param destinationEntity the Bukkit Entity to teleport towards.
      */
     public void teleport(Entity destinationEntity)
     {
@@ -106,8 +94,7 @@ public class CustomFurniture extends CustomStack
      * Teleports the Armor stand associated with this CustomFurniture to the provided location.
      * <br>This will also remove any Barrier blocks from its original position, if present.
      *
-     * @param location
-     *        The location to teleport towards.
+     * @param location the location to teleport towards.
      */
     public void teleport(Location location)
     {
@@ -117,7 +104,7 @@ public class CustomFurniture extends CustomStack
     /**
      * Gets the Armor stand associated with this CustomFurniture.
      * <br>This may return null if the Armor stand is not yet spawned in the world.
-     * 
+     *
      * @return Possibly-null Bukkit Entity instance.
      */
     @Nullable

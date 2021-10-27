@@ -1,6 +1,7 @@
 package dev.lone.itemsadder.api.FontImages;
 
 import dev.lone.itemsadder.api.NotActuallyItemsAdderException;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Class representing a HUD which accepts float values and its textures are handled by ItemsAdder.
@@ -16,6 +17,7 @@ public class PlayerQuantityHudWrapper extends PlayerHudWrapper
     /**
      * Gets the internal ItemsAdder object. Should only be used by the plugin developer.
      */
+    @Nullable
     public Object getInternal()
     {
         throw new NotActuallyItemsAdderException();
@@ -24,8 +26,7 @@ public class PlayerQuantityHudWrapper extends PlayerHudWrapper
     /**
      * Set the float value of this HUD.
      *
-     * @param value
-     *        Float value to set.
+     * @param value Float value to set.
      */
     public void setFloatValue(float value)
     {
@@ -34,6 +35,7 @@ public class PlayerQuantityHudWrapper extends PlayerHudWrapper
 
     /**
      * Get the float value of this HUD.
+     *
      * @return The float value of this hud.
      */
     public float getFloatValue()

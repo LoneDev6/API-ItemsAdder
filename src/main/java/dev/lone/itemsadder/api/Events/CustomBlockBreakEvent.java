@@ -1,5 +1,6 @@
 package dev.lone.itemsadder.api.Events;
 
+import dev.lone.itemsadder.api.CustomBlock;
 import dev.lone.itemsadder.api.NotActuallyItemsAdderException;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
@@ -34,8 +35,7 @@ public class CustomBlockBreakEvent extends PlayerEvent implements Cancellable
     /**
      * Sets the cancellation state of this event. A cancelled event will not be executed in the server, but will still pass to other plugins.
      *
-     * @param cancelled
-     *        true if you wish to cancel this event
+     * @param cancelled true if you wish to cancel this event
      */
     @Override
     public void setCancelled(boolean cancelled)
@@ -57,7 +57,8 @@ public class CustomBlockBreakEvent extends PlayerEvent implements Cancellable
 
     /**
      * Get a clone of the ItemStack of the custom block broken.
-     * @return
+     *
+     * @return the ItemStack for the {@link CustomBlock}
      */
     public ItemStack getCustomBlockItem()
     {

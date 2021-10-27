@@ -17,9 +17,9 @@ public class Examples implements Listener
     {
         System.out.println(e.getKiller().getName() + " killed " + e.getNamespacedID());
 
-        Player player = (Player)e.getKiller();
+        Player player = (Player) e.getKiller();
         CustomStack customStack = CustomStack.byItemStack(player.getItemInHand());
-        if(customStack == null)
+        if (customStack == null)
         {
             System.out.println("killed using: " + player.getItemInHand().getType() + " (non custom item)");
             return;
@@ -38,7 +38,7 @@ public class Examples implements Listener
     @EventHandler
     void test(PlayerInteractEvent e)
     {
-        if(e.getAction() != Action.RIGHT_CLICK_BLOCK || e.getHand() == EquipmentSlot.OFF_HAND)
+        if (e.getAction() != Action.RIGHT_CLICK_BLOCK || e.getHand() == EquipmentSlot.OFF_HAND)
             return;
 
         CustomBlock customBlock = CustomBlock.place("ruby_ore", e.getClickedBlock().getLocation().add(1, 0, 1));
@@ -60,11 +60,11 @@ public class Examples implements Listener
     @EventHandler
     void interact(PlayerInteractEvent e)
     {
-        if(e.getHand() == EquipmentSlot.OFF_HAND)
+        if (e.getHand() == EquipmentSlot.OFF_HAND)
             return;
 
         CustomCrop crop = CustomCrop.byAlreadyPlaced(e.getClickedBlock());
-        if(crop == null)
+        if (crop == null)
         {
             System.out.println("Not a crop");
             return;
@@ -76,11 +76,11 @@ public class Examples implements Listener
     @EventHandler
     void interact(PlayerInteractAtEntityEvent e)
     {
-        if(e.getHand() == EquipmentSlot.OFF_HAND)
+        if (e.getHand() == EquipmentSlot.OFF_HAND)
             return;
 
         CustomMob customMob = CustomMob.byAlreadySpawned(e.getRightClicked());
-        if(customMob == null)
+        if (customMob == null)
         {
             System.out.println("Not a custom mob");
             return;
