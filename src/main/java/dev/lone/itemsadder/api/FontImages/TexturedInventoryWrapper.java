@@ -151,9 +151,12 @@ public class TexturedInventoryWrapper
 
     /**
      * Get the Bukkit inventory.
+     * Warning: custom texture won't be applied correctly if the ItemsAdder configuration attribute
+     * `use_custom_font_file` is set to `true`, that's why you have to use the method {@link TexturedInventoryWrapper#showInventory(Player)}.
      *
      * @return the Bukkit inventory.
      */
+    @Deprecated
     public Inventory getInternal()
     {
         throw new NotActuallyItemsAdderException();
@@ -161,6 +164,7 @@ public class TexturedInventoryWrapper
 
     /**
      * Show this custom inventory to a player.
+     * This the only method you should use to show the inventory to players.
      *
      * @param player Player to show the inventory to.
      */
