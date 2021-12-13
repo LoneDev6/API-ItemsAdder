@@ -4,6 +4,7 @@ import org.bukkit.Location;
 import org.bukkit.block.Block;
 import org.bukkit.block.data.BlockData;
 import org.bukkit.inventory.ItemStack;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
@@ -105,8 +106,41 @@ public class CustomBlock extends CustomStack
      * Generates and returns BlockData associated with this CustomBlock.
      *
      * @return BlockData associated with the CustomBlock.
+     * @deprecated This method name is misleading.
+     * <p> Use {@link CustomBlock#getBaseBlockData()} instead.
      */
+    @Deprecated
+    @Nullable
     public BlockData generateBlockData()
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    /**
+     * Gets the base BlockData for this CustomBlock.
+     * It doesn't get the current placed block BlockData but the BlockData used to show the custom block in-game.
+     * <p>
+     * Warning: TILE CustomBlocks (Spawners) will return null. For now there is no way to obtain this data with this API.
+     *
+     * @return the base BlockData for this CustomBlock.
+     */
+    @Nullable
+    public BlockData getBaseBlockData()
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    /**
+     * Gets the base BlockData for this CustomBlock.
+     * It doesn't get the current placed block BlockData but the BlockData used to show the custom block in-game.
+     *
+     * Warning: TILE CustomBlocks (Spawners) will return null. For now there is no way to obtain this data with this API.
+     *
+     * @param namespacedID the Namespace and ID in the format {@code namespace:id} of the block to get base BlockData of.
+     * @return the base BlockData for this CustomBlock.
+     */
+    @Nullable
+    public static BlockData getBaseBlockData(String namespacedID)
     {
         throw new NotActuallyItemsAdderException();
     }
@@ -182,5 +216,61 @@ public class CustomBlock extends CustomStack
     public void setCurrentLightLevel(int level)
     {
         throw new NotActuallyItemsAdderException();
+    }
+
+    /**
+     * This class contains advanced static methods to perform various uncommon tasks, for example read/write directly
+     * into the ItemsAdder CustomBlocks region files.
+     *
+     * Use them only if you know what you're doing.
+     */
+    public static class Advanced
+    {
+        /**
+         * Gets the Namespace and ID in the format {@code namespace:id} of the placed CustomBlock in a specific location.
+         *
+         * @param location the location to check
+         * @return the Namespace and ID in the format {@code namespace:id} or null if it's not a CustomBlock.
+         */
+        @Nullable
+        public static String getInCustomRegion(Location location)
+        {
+            throw new NotActuallyItemsAdderException();
+        }
+
+        /**
+         * Saves a block into the ItemsAdder custom region file.
+         *
+         * @param customBlock the CustomBlock to place.
+         * @param location    the location where the block must be placed.
+         */
+        public static void placeInCustomRegion(@NotNull CustomBlock customBlock, Location location)
+        {
+            throw new NotActuallyItemsAdderException();
+        }
+
+        /**
+         * Saves a block into the ItemsAdder custom region file.
+         *
+         * @param namespacedId the Namespace and ID in the format {@code namespace:id} of the CustomBlock to be placed.
+         * @param location     the location where the block must be placed.
+         * @return true if the namespacedId is a registered CustomBlock, otherwise false.
+         */
+        public static boolean placeInCustomRegion(String namespacedId, Location location)
+        {
+            throw new NotActuallyItemsAdderException();
+        }
+
+        /**
+         * Remove a CustomBlock from the custom region file.
+         *
+         * @param location the location of the block to remove.
+         * @return true if the block was removed because it was actually a CustomBlock, otherwise false in case
+         * the block wasn't custom (wasn't in the custom region file).
+         */
+        public static boolean removeFromCustomRegion(Location location)
+        {
+            throw new NotActuallyItemsAdderException();
+        }
     }
 }
