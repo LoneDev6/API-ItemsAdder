@@ -91,6 +91,25 @@ public class CustomBlock extends CustomStack
     }
 
     /**
+     * Play the block break particles and sound for this custom block.
+     * @return true if the effect was played successfully because the bukkitBlock is a custom block, otherwise false.
+     */
+    public boolean playBreakEffect()
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    /**
+     * Play the block break particles and sound for this custom block.
+     * @param bukkitBlock the location of which block you want to play break effect of.
+     * @return true if the effect was played successfully because the bukkitBlock is a custom block, otherwise false.
+     */
+    public static boolean playBreakEffect(Block bukkitBlock)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    /**
      * Returns whether removing the CustomBlock at the provided location was successful or not.
      * <br>A removal is successful if the Block at the provided location is an actual CustomBlock.
      *
@@ -194,6 +213,19 @@ public class CustomBlock extends CustomStack
      * @return List containing ItemStack instances for the loot.
      */
     public List<ItemStack> getLoot(ItemStack tool, boolean includeSelfBlock)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    /**
+     * Returns a list of ItemStack instances to drop as loot for this CustomBlock.
+     *
+     * @param bukkitBlock      The Bukkit Block to get the loots from.
+     * @param tool             The Item required to get the loot for the CustomBlock.
+     * @param includeSelfBlock If the CustomBlock itself should be included in the list.
+     * @return List containing ItemStack instances for the loot.
+     */
+    public static List<ItemStack> getLoot(Block bukkitBlock, ItemStack tool, boolean includeSelfBlock)
     {
         throw new NotActuallyItemsAdderException();
     }

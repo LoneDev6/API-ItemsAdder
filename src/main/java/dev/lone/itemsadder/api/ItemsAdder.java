@@ -3,6 +3,7 @@ package dev.lone.itemsadder.api;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.NamespacedKey;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
 import org.bukkit.block.data.BlockData;
@@ -376,6 +377,26 @@ public class ItemsAdder
      * @return null if ItemsAdder is not loaded completely, be sure to listen to ItemsAdderLoadDataEvent
      */
     public static List<CustomStack> getAllItems(Material material)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    /**
+     * Check if a custom recipe is registered by ItemsAdder.
+     * @param namespacedKey the recipe namespaced key.
+     * @return true if it's an ItemsAdder recipe, false if not.
+     */
+    public static boolean isCustomRecipe(NamespacedKey namespacedKey)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    /**
+     * Check if a custom recipe is registered by ItemsAdder.
+     * @param namespacedKey the recipe Namespace and ID in the format {@code namespace:id}.
+     * @return true if it's an ItemsAdder recipe, false if not.
+     */
+    public static boolean isCustomRecipe(String namespacedKey)
     {
         throw new NotActuallyItemsAdderException();
     }
