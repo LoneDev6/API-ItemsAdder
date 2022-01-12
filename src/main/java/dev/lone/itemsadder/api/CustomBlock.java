@@ -212,7 +212,7 @@ public class CustomBlock extends CustomStack
      * @param includeSelfBlock If the CustomBlock itself should be included in the list.
      * @return List containing ItemStack instances for the loot.
      */
-    public List<ItemStack> getLoot(ItemStack tool, boolean includeSelfBlock)
+    public List<ItemStack> getLoot(@Nullable ItemStack tool, boolean includeSelfBlock)
     {
         throw new NotActuallyItemsAdderException();
     }
@@ -225,7 +225,7 @@ public class CustomBlock extends CustomStack
      * @param includeSelfBlock If the CustomBlock itself should be included in the list.
      * @return List containing ItemStack instances for the loot.
      */
-    public static List<ItemStack> getLoot(Block bukkitBlock, ItemStack tool, boolean includeSelfBlock)
+    public static List<ItemStack> getLoot(Block bukkitBlock, @Nullable ItemStack tool, boolean includeSelfBlock)
     {
         throw new NotActuallyItemsAdderException();
     }
