@@ -110,6 +110,63 @@ public class CustomBlock extends CustomStack
     }
 
     /**
+     * Play the block break sound for this custom block.
+     * @return true if the sound was played successfully because the bukkitBlock is a custom block, otherwise false.
+     */
+    public boolean playBreakSound()
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    /**
+     * Play the block break sound for this custom block.
+     * @param bukkitBlock the location of which block you want to play break sound of.
+     * @return true if the effect was played successfully because the bukkitBlock is a custom block, otherwise false.
+     */
+    public static boolean playBreakSound(Block bukkitBlock)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    /**
+     * Play the block break particles for this custom block.
+     * @return true if the effect was played successfully because the bukkitBlock is a custom block, otherwise false.
+     */
+    public boolean playBreakParticles()
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    /**
+     * Play the block break particles for this custom block.
+     * @param bukkitBlock the location of which block you want to play break particles of.
+     * @return true if the effect was played successfully because the bukkitBlock is a custom block, otherwise false.
+     */
+    public static boolean playBreakParticles(Block bukkitBlock)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    /**
+     * Play the block place particles for this custom block.
+     * @return true if the effect was played successfully because the bukkitBlock is a custom block, otherwise false.
+     */
+    public boolean playPlaceSound()
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    /**
+     * Play the block place particles for this custom block.
+     * @param bukkitBlock the location of which block you want to play place particles of.
+     * @return true if the effect was played successfully because the bukkitBlock is a custom block, otherwise false.
+     */
+    public static boolean playPlaceSound(Block bukkitBlock)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    /**
      * Returns whether removing the CustomBlock at the provided location was successful or not.
      * <br>A removal is successful if the Block at the provided location is an actual CustomBlock.
      *
