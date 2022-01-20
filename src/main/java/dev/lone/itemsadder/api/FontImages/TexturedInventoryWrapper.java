@@ -13,32 +13,67 @@ import org.jetbrains.annotations.Nullable;
  */
 public class TexturedInventoryWrapper
 {
+    //<editor-fold desc="Multi texture">
+
     /**
      * Create a custom textured inventory.
      *
-     * @param owner   the holder of the inventory, or null to indicate no holder
-     * @param type    the type of inventory to create.
-     * @param title   the title of the inventory, to be displayed when it is viewed.
-     * @param texture {@link FontImageWrapper} to be used as texture for this inventory
+     * @param owner         the holder of the inventory, or null to indicate no holder
+     * @param size          a multiple of 9 as the size of inventory to create
+     * @param title         the title of the inventory, to be displayed when it is viewed.
+     * @param titleOffset   offset to shift the title back or forward. Default value is {@code 16}
+     * @param textureOffset offset to shift the {@link FontImageWrapper} back or forward. Default value is {@code -16}
+     * @param textures      array of {@link FontImageWrapper} to be used as textures for this inventory
      */
-    public TexturedInventoryWrapper(@Nullable InventoryHolder owner, @NotNull InventoryType type, @NotNull String title, FontImageWrapper texture)
+    public TexturedInventoryWrapper(@Nullable InventoryHolder owner, int size, String title, int titleOffset, int textureOffset, FontImageWrapper... textures)
     {
-        this(owner, type, title, texture, 16, -16);
+        throw new NotActuallyItemsAdderException();
     }
 
     /**
      * Create a custom textured inventory.
      *
-     * @param owner       the holder of the inventory, or null to indicate no holder
-     * @param type        the type of inventory to create.
-     * @param title       the title of the inventory, to be displayed when it is viewed.
-     * @param texture     {@link FontImageWrapper} to be used as texture for this inventory
-     * @param titleOffset int offset to shift the title back or forward. Default value is {@code 16}
+     * @param owner         the holder of the inventory, or null to indicate no holder
+     * @param type          the type of inventory to create.
+     * @param title         the title of the inventory, to be displayed when it is viewed.
+     * @param titleOffset   offset to shift the title back or forward. Default value is {@code 16}
+     * @param textureOffset offset to shift the {@link FontImageWrapper} back or forward. Default value is {@code -16}
+     * @param textures      array of {@link FontImageWrapper} to be used as textures for this inventory
      */
-    public TexturedInventoryWrapper(@Nullable InventoryHolder owner, @NotNull InventoryType type, @NotNull String title, FontImageWrapper texture, int titleOffset)
+    public TexturedInventoryWrapper(@Nullable InventoryHolder owner, @NotNull InventoryType type, String title, int titleOffset, int textureOffset, FontImageWrapper... textures)
     {
-        this(owner, type, title, texture, titleOffset, -16);
+        throw new NotActuallyItemsAdderException();
     }
+
+    /**
+     * Create a custom textured inventory without any title shown.
+     *
+     * @param owner         the holder of the inventory, or null to indicate no holder
+     * @param size          a multiple of 9 as the size of inventory to create
+     * @param textureOffset offset to shift the {@link FontImageWrapper} back or forward. Default value is {@code -16}
+     * @param textures      array of {@link FontImageWrapper} to be used as textures for this inventory
+     */
+    public TexturedInventoryWrapper(@Nullable InventoryHolder owner, int size, int textureOffset, FontImageWrapper... textures)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    /**
+     * Create a custom textured inventory without any title shown.
+     *
+     * @param owner         the holder of the inventory, or null to indicate no holder
+     * @param type          the type of inventory to create.
+     * @param textureOffset offset to shift the {@link FontImageWrapper} back or forward. Default value is {@code -16}
+     * @param textures      array of {@link FontImageWrapper} to be used as textures for this inventory
+     */
+    public TexturedInventoryWrapper(@Nullable InventoryHolder owner, @NotNull InventoryType type, int textureOffset, FontImageWrapper... textures)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    //</editor-fold>
+
+    //<editor-fold desc="Single Texture">
 
     /**
      * Create a custom textured inventory.
@@ -50,36 +85,9 @@ public class TexturedInventoryWrapper
      * @param titleOffset   offset to shift the title back or forward. Default value is {@code 16}
      * @param textureOffset offset to shift the {@link FontImageWrapper} back or forward. Default value is {@code -16}
      */
-    public TexturedInventoryWrapper(@Nullable InventoryHolder owner, @NotNull InventoryType type, @NotNull String title, FontImageWrapper texture, int titleOffset, int textureOffset)
+    public TexturedInventoryWrapper(@Nullable InventoryHolder owner, @NotNull InventoryType type, String title, FontImageWrapper texture, int titleOffset, int textureOffset)
     {
         throw new NotActuallyItemsAdderException();
-    }
-
-    /**
-     * Create a custom textured inventory.
-     *
-     * @param owner   the holder of the inventory, or null to indicate no holder
-     * @param size    a multiple of 9 as the size of inventory to create
-     * @param title   the title of the inventory, to be displayed when it is viewed.
-     * @param texture {@link FontImageWrapper} to be used as texture for this inventory
-     */
-    public TexturedInventoryWrapper(@Nullable InventoryHolder owner, int size, @NotNull String title, FontImageWrapper texture)
-    {
-        this(owner, size, title, texture, 16, -16);
-    }
-
-    /**
-     * Create a custom textured inventory.
-     *
-     * @param owner       the holder of the inventory, or null to indicate no holder
-     * @param size        a multiple of 9 as the size of inventory to create
-     * @param title       the title of the inventory, to be displayed when it is viewed.
-     * @param texture     {@link FontImageWrapper} to be used as texture for this inventory
-     * @param titleOffset int offset to shift the title back or forward. Default value is {@code 16}
-     */
-    public TexturedInventoryWrapper(@Nullable InventoryHolder owner, int size, @NotNull String title, FontImageWrapper texture, int titleOffset)
-    {
-        this(owner, size, title, texture, titleOffset, -16);
     }
 
     /**
@@ -92,10 +100,96 @@ public class TexturedInventoryWrapper
      * @param titleOffset   int offset to shift the title back or forward. Default value is {@code 16}
      * @param textureOffset int offset to shift the {@link FontImageWrapper} back or forward. Default value is {@code -16}
      */
-    public TexturedInventoryWrapper(@Nullable InventoryHolder owner, int size, @NotNull String title, FontImageWrapper texture, int titleOffset, int textureOffset)
+    public TexturedInventoryWrapper(@Nullable InventoryHolder owner, int size, String title, FontImageWrapper texture, int titleOffset, int textureOffset)
     {
         throw new NotActuallyItemsAdderException();
     }
+
+    //<editor-fold desc="Deprecated">
+    /**
+     * This is deprecated. You should specify titleOffset and textureOffset based on your needs.
+     * Don't rely on the default values since they are misleading.
+     * titleOffset: Default value is {@code 16}
+     * textureOffset: Default value is {@code -16}
+     *
+     *
+     * Create a custom textured inventory.
+     *
+     * @param owner   the holder of the inventory, or null to indicate no holder
+     * @param type    the type of inventory to create.
+     * @param title   the title of the inventory, to be displayed when it is viewed.
+     * @param texture {@link FontImageWrapper} to be used as texture for this inventory
+     */
+    @Deprecated
+    public TexturedInventoryWrapper(@Nullable InventoryHolder owner, @NotNull InventoryType type, String title, FontImageWrapper texture)
+    {
+        this(owner, type, title, texture, 16, -16);
+    }
+
+    /**
+     * This is deprecated. You should specify titleOffset and textureOffset based on your needs.
+     * Don't rely on the default values since they are misleading.
+     * titleOffset: Default value is {@code 16}
+     * textureOffset: Default value is {@code -16}
+     *
+     *
+     * Create a custom textured inventory.
+     *
+     * @param owner       the holder of the inventory, or null to indicate no holder
+     * @param type        the type of inventory to create.
+     * @param title       the title of the inventory, to be displayed when it is viewed.
+     * @param texture     {@link FontImageWrapper} to be used as texture for this inventory
+     * @param titleOffset int offset to shift the title back or forward. Default value is {@code 16}
+     */
+    @Deprecated
+    public TexturedInventoryWrapper(@Nullable InventoryHolder owner, @NotNull InventoryType type, String title, FontImageWrapper texture, int titleOffset)
+    {
+        this(owner, type, title, texture, titleOffset, -16);
+    }
+
+    /**
+     * This is deprecated. You should specify titleOffset and textureOffset based on your needs.
+     * Don't rely on the default values since they are misleading.
+     * titleOffset: Default value is {@code 16}
+     * textureOffset: Default value is {@code -16}
+     *
+     *
+     * Create a custom textured inventory.
+     *
+     * @param owner   the holder of the inventory, or null to indicate no holder
+     * @param size    a multiple of 9 as the size of inventory to create
+     * @param title   the title of the inventory, to be displayed when it is viewed.
+     * @param texture {@link FontImageWrapper} to be used as texture for this inventory
+     */
+    @Deprecated
+    public TexturedInventoryWrapper(@Nullable InventoryHolder owner, int size, String title, FontImageWrapper texture)
+    {
+        this(owner, size, title, texture, 16, -16);
+    }
+
+    /**
+     * This is deprecated. You should specify titleOffset and textureOffset based on your needs.
+     * Don't rely on the default values since they are misleading.
+     * titleOffset: Default value is {@code 16}
+     * textureOffset: Default value is {@code -16}
+     *
+     *
+     * Create a custom textured inventory.
+     *
+     * @param owner       the holder of the inventory, or null to indicate no holder
+     * @param size        a multiple of 9 as the size of inventory to create
+     * @param title       the title of the inventory, to be displayed when it is viewed.
+     * @param texture     {@link FontImageWrapper} to be used as texture for this inventory
+     * @param titleOffset int offset to shift the title back or forward. Default value is {@code 16}
+     */
+    @Deprecated
+    public TexturedInventoryWrapper(@Nullable InventoryHolder owner, int size, String title, FontImageWrapper texture, int titleOffset)
+    {
+        this(owner, size, title, texture, titleOffset, -16);
+    }
+    //</editor-fold>
+
+    //</editor-fold>
 
     /**
      * Static utility method to change texture of an inventory at runtime.
