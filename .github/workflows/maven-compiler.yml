@@ -13,12 +13,6 @@ on:
     paths:
     - 'src/**'
     - 'pom.xml'
-  workflow_run:
-    branches:
-    - master
-    paths:
-    - 'src/**'
-    - 'pom.xml'
 
 jobs:
   build:
