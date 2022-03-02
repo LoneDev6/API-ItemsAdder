@@ -2,11 +2,17 @@
 name: Manually Compile
 
 on:
-  workflow_run:
-    workflows:
-      - Java CI
-    types:
-      - completed
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'     
+        required: true
+        default: 'warning' 
+        type: choice
+        options:
+        - info
+        - warning
+        - debug 
 
 jobs:
   build:
