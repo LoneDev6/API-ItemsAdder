@@ -1,0 +1,2 @@
+- name: Deploy Javadoc
+  uses: MathieuSoysal/Javadoc-publisher.yml@v2.0.3
