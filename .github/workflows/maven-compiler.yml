@@ -13,6 +13,12 @@ on:
     paths:
     - 'src/**'
     - 'pom.xml'
+  workflow_run:
+    branches:
+    - master
+    paths:
+    - 'src/**'
+    - 'pom.xml'
 
 jobs:
   build:
@@ -30,3 +36,5 @@ jobs:
         java-version: 8
     - name: Build with Maven
       run: mvn package --file pom.xml
+    - name: Deploy Javadoc
+      uses: MathieuSoysal/Javadoc-publisher.yml@v2.0.3
