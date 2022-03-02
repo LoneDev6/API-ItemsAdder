@@ -7,3 +7,11 @@ on:
       - Java CI
     types:
       - completed
+
+# Dummy
+jobs:
+  test-job:
+    name: Test Step
+    runs-on: ubuntu-latest
+    steps:
+      - run: env
