@@ -71,7 +71,7 @@ Alternatively, you can also include the dependency using [jitpack.io](https://ji
 
 ### 1. via `maven.pkg.github.com` (requires authentication)
 Repository:
-```
+```gradle
 repositories {
     maven {
         url 'https://maven.pkg.github.com/LoneDev6/API-ItemsAdder'
@@ -80,7 +80,7 @@ repositories {
 ```
 
 Artifact (Replace `VERSION` with the [latest release](https://github.com/LoneDev6/API-ItemsAdder/packages?ecosystem=maven) of this package):
-```
+```gradle
 dependencies {
     implementation 'dev.lone:api-itemsadder:VERSION'
 }
@@ -91,7 +91,7 @@ Alternatively, you can also include the dependency using [jitpack.io](https://ji
 
 ### 2. via `jitpack.io`
 Repository:
-```
+```gradle
 repositories {
     maven {
         url 'https://jitpack.io'
@@ -100,7 +100,7 @@ repositories {
 ```
 
 Artifact (Replace `VERSION` with the [latest release](https://github.com/LoneDev6/API-ItemsAdder/packages?ecosystem=maven) of this package):
-```
+```gradle
 dependencies {
     implementation 'com.github.LoneDev6:API-ItemsAdder:VERSION'
 }
