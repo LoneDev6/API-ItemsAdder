@@ -400,17 +400,4 @@ public class ItemsAdder
     {
         throw new NotActuallyItemsAdderException();
     }
-
-    public static class Emotes
-    {
-        public static void play(Player player, String emoteName)
-        {
-            throw new NotActuallyItemsAdderException();
-        }
-
-        public static void stop(Player player)
-        {
-            throw new NotActuallyItemsAdderException();
-        }
-    }
 }
