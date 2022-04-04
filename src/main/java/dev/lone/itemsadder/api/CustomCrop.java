@@ -2,7 +2,10 @@ package dev.lone.itemsadder.api;
 
 import org.bukkit.Location;
 import org.bukkit.block.Block;
+import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.List;
 
 /**
  * Class representing a custom crop in ItemsAdder.
@@ -36,12 +39,41 @@ public class CustomCrop
         throw new NotActuallyItemsAdderException();
     }
 
+    public static boolean isSeed(ItemStack itemStack)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    @Nullable
+    public static List<ItemStack> getLoot(Block block, @Nullable ItemStack toolUsed)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    @Nullable
+    public static List<ItemStack> getLoot(Block block)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
     /**
      * Gets a {@link CustomStack} instance of the Seeds associated with this CustomCrop.
      *
      * @return {@link CustomStack} representing the seeds for this CustomCrop.
      */
     public CustomStack getSeed()
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    @Nullable
+    public List<ItemStack> getLoot(@Nullable ItemStack toolUsed)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    @Nullable
+    public List<ItemStack> getLoot()
     {
         throw new NotActuallyItemsAdderException();
     }
