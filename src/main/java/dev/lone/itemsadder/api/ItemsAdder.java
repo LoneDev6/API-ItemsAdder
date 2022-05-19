@@ -400,4 +400,23 @@ public class ItemsAdder
     {
         throw new NotActuallyItemsAdderException();
     }
+
+    /**
+     * Advanced stuff, better not touch it.
+     */
+    public static class Advanced
+    {
+        /**
+         * Calculates the correct Bukkit BlockData based on the internal ItemsAdder registry ID.
+         * This is used by some specific special plugins.
+         * @param id internal ItemsAdder registry ID
+         * @return Bukkit BlockData
+         */
+        @Deprecated
+        @Nullable
+        public static BlockData getBlockDataByInternalId(int id)
+        {
+            throw new NotActuallyItemsAdderException();
+        }
+    }
 }
