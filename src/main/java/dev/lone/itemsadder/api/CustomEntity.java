@@ -264,9 +264,6 @@ public class CustomEntity
 
     public static class Bone
     {
-        int ordinal;
-        int id;
-
         /**
          * @return the number of the bone as it is specified within the {@link CustomEntity}.
          * The number remains the same for the same bone independent of {@link CustomEntity} instances if
