@@ -173,7 +173,7 @@ public class CustomEntity
     /**
      * Adds a passenger to this entity to the first available mount slot
      * @param passenger the player to mount
-     * @return
+     * @return true if successful, otherwise false
      */
     public boolean addPassenger(LivingEntity passenger)
     {

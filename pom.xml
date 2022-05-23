@@ -16,19 +16,6 @@
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
-    <profiles>
-        <profile>
-            <id>disable-java8-doclint</id>
-            <activation>
-                <jdk>[1.8,)</jdk>
-            </activation>
-            <properties>
-                <additionalparam>-Xdoclint:none</additionalparam>
-            </properties>
-        </profile>
-    </profiles>
-
-
     <!-- A reference to our Issues Tracker -->
     <issueManagement>
         <system>GitHub Issues</system>
