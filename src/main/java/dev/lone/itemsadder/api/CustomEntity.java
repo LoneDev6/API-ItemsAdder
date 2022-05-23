@@ -268,9 +268,9 @@ public class CustomEntity
         int id;
 
         /**
-         * @return the number of the bone as it is specified within the {@link CustomEntity}
-         * @apiNote Remains the same for the same bone
-         *          independent of {@link CustomEntity} instances if their namespaced id is the same
+         * @return the number of the bone as it is specified within the {@link CustomEntity}.
+         * The number remains the same for the same bone independent of {@link CustomEntity} instances if
+         * their namespaced id is the same
          */
         public int getOrdinal()
         {
