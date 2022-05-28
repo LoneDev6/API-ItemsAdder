@@ -82,7 +82,7 @@ repositories {
 Artifact (Replace `VERSION` with the [latest release](https://github.com/LoneDev6/API-ItemsAdder/packages?ecosystem=maven) of this package):
 ```gradle
 dependencies {
-    implementation 'dev.lone:api-itemsadder:VERSION'
+    compileOnly 'dev.lone:api-itemsadder:VERSION'
 }
 ```
 
@@ -102,7 +102,7 @@ repositories {
 Artifact (Replace `VERSION` with the [latest release](https://github.com/LoneDev6/API-ItemsAdder/packages?ecosystem=maven) of this package):
 ```gradle
 dependencies {
-    implementation 'com.github.LoneDev6:API-ItemsAdder:VERSION'
+    compileOnly 'com.github.LoneDev6:API-ItemsAdder:VERSION'
 }
 ```
 
