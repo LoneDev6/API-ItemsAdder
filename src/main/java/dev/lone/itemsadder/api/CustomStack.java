@@ -6,12 +6,32 @@ import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * Allows the creation and retrieval of cutom Item Stacks.
  */
 public class CustomStack
 {
+    /**
+     * Returns a list of all the registered items identifiers in the format {@code namespace:id}
+     * @return a list of Namespaces and IDs in the format {@code namespace:id}
+     */
+    public static Set<String> getNamespacedIdsInRegistry()
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    /**
+     * Returns true if the registry contains an item with the specified namespaced id in the format {@code namespace:id}
+     * @param namespacedId Namespace and ID in the format {@code namespace:id}
+     * @return true if it contains the namespaced id, otherwise false
+     */
+    public static boolean isInRegistry(String namespacedId)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
     /**
      * Returns null if the provided {@link ItemStack} is not a custom item created with ItemsAdder.
      *

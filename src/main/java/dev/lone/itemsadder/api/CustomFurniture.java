@@ -2,7 +2,6 @@ package dev.lone.itemsadder.api;
 
 import org.bukkit.Location;
 import org.bukkit.block.Block;
-import org.bukkit.entity.ArmorStand;
 import org.bukkit.entity.Entity;
 import org.jetbrains.annotations.Nullable;
 
@@ -16,11 +15,11 @@ public class CustomFurniture extends CustomStack
      * Gets a CustomFurniture instance from the provided Armor stand.
      * <br>This may return null if the Armor stand is not part of a furniture.
      *
-     * @param armorStand The Armor stand to get the CustomFurniture from.
+     * @param entity The Entity to get the CustomFurniture from.
      * @return Possibly-null instance of CustomFurniture
      */
     @Nullable
-    public static CustomFurniture byAlreadySpawned(ArmorStand armorStand)
+    public static CustomFurniture byAlreadySpawned(Entity entity)
     {
         throw new NotActuallyItemsAdderException();
     }
@@ -71,10 +70,10 @@ public class CustomFurniture extends CustomStack
     /**
      * Removes this CustomFurniture and the Armor stand associated with it from the world.
      *
-     * @param armorStand the Armor stand to remove with the CustomFurniture.
+     * @param entity the Entity to remove with the CustomFurniture.
      * @param dropItem   if an item should be dropped.
      */
-    public static void remove(Entity armorStand, boolean dropItem)
+    public static void remove(Entity entity, boolean dropItem)
     {
         throw new NotActuallyItemsAdderException();
     }

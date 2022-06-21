@@ -5,8 +5,10 @@ import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
+import org.bukkit.util.Consumer;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 
@@ -15,6 +17,46 @@ import java.util.UUID;
  */
 public class CustomEntity
 {
+    /**
+     * Returns a list of all the registered entities identifiers in the format {@code namespace:id}
+     * @return a list of Namespaces and IDs in the format {@code namespace:id}
+     */
+    public static Set<String> getNamespacedIdsInRegistry()
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    /**
+     * Returns true if the registry contains an entity with the specified namespaced id in the format {@code namespace:id}
+     * @param namespacedId Namespace and ID in the format {@code namespace:id}
+     * @return true if it contains the namespaced id, otherwise false
+     */
+    public static boolean isInRegistry(String namespacedId)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    /**
+     * Spawns a CustomEntity and returns the created CustomEntity instance, or null if Namespace and ID are invalid.
+     *
+     * @param namespacedId Namespace and ID in the format {@code namespace:id} to get the CustomEntity from.
+     * @param location     the Location to spawn the CustomEntity at.
+     * @param viewers the list of players which can see this entity.
+     * @param frustumCulling if this entity needs to be frozen if not visible by the player.
+     * @param function a function which is executed when the base entity is going to be spawned, executed at the same time of
+     *                 the Spigot API function: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/RegionAccessor.html#spawn%28org.bukkit.Location%2Cjava.lang.Class%2Cboolean%2Corg.bukkit.util.Consumer%29=
+     * @return Possibly-null CustomEntity instance.
+     */
+    @Nullable
+    public static CustomEntity spawn(String namespacedId,
+                                     Location location,
+                                     List<Player> viewers,
+                                     boolean frustumCulling,
+                                     @Nullable Consumer<LivingEntity> function)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
     /**
      * Spawns a CustomEntity and returns the created CustomEntity instance, or null if Namespace and ID are invalid.
      *
@@ -71,6 +113,16 @@ public class CustomEntity
         throw new NotActuallyItemsAdderException();
     }
 
+    public Location getLocation()
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    public void teleport(Location location)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
     /**
      * Gets the Namespace and ID in the format {@code namespace:id} for this CustomEntity.
      *
@@ -106,6 +158,26 @@ public class CustomEntity
      * @param player the player to send packets to
      */
     public void respawn(Player player)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    public void addViewer(Player player)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    public void removeViewer(Player player)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    public void setFrustumCulling(boolean cull)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    public boolean getFrustumCulling()
     {
         throw new NotActuallyItemsAdderException();
     }

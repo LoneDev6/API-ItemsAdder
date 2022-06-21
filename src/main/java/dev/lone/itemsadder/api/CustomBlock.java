@@ -8,12 +8,32 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * Class representing a custom block in ItemsAdder.
  */
 public class CustomBlock extends CustomStack
 {
+    /**
+     * Returns a list of all the registered blocks identifiers in the format {@code namespace:id}
+     * @return a list of Namespaces and IDs in the format {@code namespace:id}
+     */
+    public static Set<String> getNamespacedIdsInRegistry()
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    /**
+     * Returns true if the registry contains a block with the specified namespaced id in the format {@code namespace:id}
+     * @param namespacedId Namespace and ID in the format {@code namespace:id}
+     * @return true if it contains the namespaced id, otherwise false
+     */
+    public static boolean isInRegistry(String namespacedId)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
     /**
      * Gets a CustomBlock instance through the provided namespace and ID.
      * <br>This may return null if the provided namespace and ID are invalid.
