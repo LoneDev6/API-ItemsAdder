@@ -234,6 +234,24 @@ public class CustomEntity
     }
 
     /**
+     * Changes color of every bone of this custom entity.
+     * @param color the color, can be obtained with tools like this: https://minecraftcommand.science/armor-color
+     */
+    public void setColorAllBones(int color)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    /**
+     * Set enchant effect to every bone of this custom entity.
+     * @param enchanted true if enchanted, otherwise false.
+     */
+    public void setEnchantedAllBones(boolean enchanted)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    /**
      * Check if this entity has any mount bone and can be mounted by players
      * @return true if it can be mounted, otherwise false
      */
@@ -360,6 +378,42 @@ public class CustomEntity
          * @return current bone location in the world
          */
         public Location getLocation()
+        {
+            throw new NotActuallyItemsAdderException();
+        }
+
+        /**
+         * Get color of this bone.
+         * @return int color of this bone.
+         */
+        public int getColor()
+        {
+            throw new NotActuallyItemsAdderException();
+        }
+
+        /**
+         * Changes color of this bone.
+         * @param color the color, can be obtained with tools like this: https://minecraftcommand.science/armor-color
+         */
+        public void setColor(int color)
+        {
+            throw new NotActuallyItemsAdderException();
+        }
+
+        /**
+         * Get if that bone has the enchant effect.
+         * @return true if the bone has the enchant effect, otherwise false.
+         */
+        public boolean getEnchanted()
+        {
+            throw new NotActuallyItemsAdderException();
+        }
+
+        /**
+         * Set enchant effect to this bone.
+         * @param enchanted true if enchanted, otherwise false.
+         */
+        public void setEnchanted(boolean enchanted)
         {
             throw new NotActuallyItemsAdderException();
         }
