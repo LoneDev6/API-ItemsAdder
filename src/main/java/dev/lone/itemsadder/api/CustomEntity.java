@@ -217,6 +217,46 @@ public class CustomEntity
     }
 
     /**
+     * Check if a custom entity model has an animation registered by its name
+     * @param entityNamespacedId the custom entity identifier in the format {@code namespace:id}
+     * @param animationName the animation name
+     * @return true if the animation exists, otherwise false
+     */
+    public static boolean hasAnimation(String entityNamespacedId, String animationName)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    /**
+     * Check if this custom entity model has an animation registered
+     * @param name the animation name
+     * @return true if the animation exists, otherwise false
+     */
+    public boolean hasAnimation(String name)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    /**
+     * Get all custom entity model animations registered by its name
+     * @param entityNamespacedId the custom entity identifier in the format {@code namespace:id}
+     * @return a list of the animations registered for a custom entity
+     */
+    public static List<String> getAnimationsNames(String entityNamespacedId)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    /**
+     * Get all custom entity model animations for this custom entity
+     * @return a list of the animations registered for a custom entity
+     */
+    public List<String> getAnimationsNames()
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    /**
      * Completely removes this entity from the world
      */
     public void destroy()
