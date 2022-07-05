@@ -41,6 +41,33 @@ public class CustomEntity
      *
      * @param namespacedId Namespace and ID in the format {@code namespace:id} to get the CustomEntity from.
      * @param location     the Location to spawn the CustomEntity at.
+     * @return Possibly-null CustomEntity instance.
+     */
+    @Nullable
+    public static CustomEntity spawn(String namespacedId, Location location)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    /**
+     * Spawns a CustomEntity and returns the created CustomEntity instance, or null if Namespace and ID are invalid.
+     *
+     * @param namespacedId Namespace and ID in the format {@code namespace:id} to get the CustomEntity from.
+     * @param location     the Location to spawn the CustomEntity at.
+     * @param frustumCulling if this entity needs to be frozen if not visible by the player.
+     * @return Possibly-null CustomEntity instance.
+     */
+    @Nullable
+    public static CustomEntity spawn(String namespacedId, Location location, boolean frustumCulling)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    /**
+     * Spawns a CustomEntity and returns the created CustomEntity instance, or null if Namespace and ID are invalid.
+     *
+     * @param namespacedId Namespace and ID in the format {@code namespace:id} to get the CustomEntity from.
+     * @param location     the Location to spawn the CustomEntity at.
      * @param viewers the list of players which can see this entity.
      * @param frustumCulling if this entity needs to be frozen if not visible by the player.
      * @param function a function which is executed when the base entity is going to be spawned, executed at the same time of
@@ -53,19 +80,6 @@ public class CustomEntity
                                      List<Player> viewers,
                                      boolean frustumCulling,
                                      @Nullable Consumer<LivingEntity> function)
-    {
-        throw new NotActuallyItemsAdderException();
-    }
-
-    /**
-     * Spawns a CustomEntity and returns the created CustomEntity instance, or null if Namespace and ID are invalid.
-     *
-     * @param namespacedId Namespace and ID in the format {@code namespace:id} to get the CustomEntity from.
-     * @param location     the Location to spawn the CustomEntity at.
-     * @return Possibly-null CustomEntity instance.
-     */
-    @Nullable
-    public static CustomEntity spawn(String namespacedId, Location location)
     {
         throw new NotActuallyItemsAdderException();
     }
@@ -465,7 +479,7 @@ public class CustomEntity
          * @return May be null if the bone is not occupied
          */
         @Nullable
-        LivingEntity getPassenger()
+        public LivingEntity getPassenger()
         {
             throw new NotActuallyItemsAdderException();
         }
@@ -475,12 +489,32 @@ public class CustomEntity
          *
          * @param entity passenger to set
          */
-        boolean setPassenger(LivingEntity entity)
+        public boolean setPassenger(LivingEntity entity)
         {
             throw new NotActuallyItemsAdderException();
         }
 
-        void removePassenger()
+        public void removePassenger()
+        {
+            throw new NotActuallyItemsAdderException();
+        }
+
+        public void setLocked(boolean locked)
+        {
+            throw new NotActuallyItemsAdderException();
+        }
+
+        public boolean isLocked()
+        {
+            throw new NotActuallyItemsAdderException();
+        }
+
+        public void setCanControl(boolean canControl)
+        {
+            throw new NotActuallyItemsAdderException();
+        }
+
+        public boolean canControl()
         {
             throw new NotActuallyItemsAdderException();
         }
