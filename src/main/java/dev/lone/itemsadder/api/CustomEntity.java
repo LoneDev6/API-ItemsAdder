@@ -85,6 +85,54 @@ public class CustomEntity
     }
 
     /**
+     * Spawns a CustomEntity and returns the created CustomEntity instance, or null if Namespace and ID are invalid.
+     *
+     * @param namespacedId Namespace and ID in the format {@code namespace:id} to get the CustomEntity from.
+     * @param bukkitEntity the Bukkit entity you want to convert.
+     * @return Possibly-null CustomEntity instance.
+     */
+    @Nullable
+    public static CustomEntity convert(String namespacedId,
+                                       LivingEntity bukkitEntity)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    /**
+     * Spawns a CustomEntity and returns the created CustomEntity instance, or null if Namespace and ID are invalid.
+     *
+     * @param namespacedId Namespace and ID in the format {@code namespace:id} to get the CustomEntity from.
+     * @param bukkitEntity the Bukkit entity you want to convert.
+     * @param frustumCulling if this entity needs to be frozen if not visible by the player.
+     * @return Possibly-null CustomEntity instance.
+     */
+    @Nullable
+    public static CustomEntity convert(String namespacedId,
+                                       LivingEntity bukkitEntity,
+                                       boolean frustumCulling)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    /**
+     * Spawns a CustomEntity and returns the created CustomEntity instance, or null if Namespace and ID are invalid.
+     *
+     * @param namespacedId Namespace and ID in the format {@code namespace:id} to get the CustomEntity from.
+     * @param bukkitEntity the Bukkit entity you want to convert.
+     * @param viewers the list of players which can see this entity.
+     * @param frustumCulling if this entity needs to be frozen if not visible by the player.
+     * @return Possibly-null CustomEntity instance.
+     */
+    @Nullable
+    public static CustomEntity convert(String namespacedId,
+                                       LivingEntity bukkitEntity,
+                                       List<Player> viewers,
+                                       boolean frustumCulling)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    /**
      * Gets a CustomEntity instance through a Bukkit Entity.
      * <br>This returns null if the provided Entity doesn't belong to a CustomEntity.
      *
