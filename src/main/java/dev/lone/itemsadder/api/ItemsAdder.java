@@ -10,6 +10,7 @@ import org.bukkit.block.data.BlockData;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.plugin.Plugin;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.HashMap;
@@ -417,6 +418,35 @@ public class ItemsAdder
         public static BlockData getBlockDataByInternalId(int id)
         {
             throw new NotActuallyItemsAdderException();
+        }
+
+        /**
+         * Inject a function which can edit a specific item registered into the ItemsAdder registry.
+         * Use this to customize your item even more.
+         * @param plugin the plugin where you are calling this method
+         * @param namespacedId the Id of the item you want to edit in the format {@code namespace:id}
+         * @param modifier the function which will edit the item
+         */
+        public static void injectItemModifier(Plugin plugin, String namespacedId, ModifierHandler modifier)
+        {
+            throw new NotActuallyItemsAdderException();
+        }
+
+        /**
+         * Inject a function which can edit ANY item registered into the ItemsAdder registry.
+         * Use this to customize your item even more.
+         * @param plugin the plugin where you are calling this method
+         * @param modifier the function which will edit the item
+         */
+        public static void injectItemModifier(Plugin plugin, ModifierHandler modifier)
+        {
+            throw new NotActuallyItemsAdderException();
+        }
+
+        @FunctionalInterface
+        public interface ModifierHandler
+        {
+            ItemStack call(String namespacedId, ItemStack par);
         }
     }
 }
