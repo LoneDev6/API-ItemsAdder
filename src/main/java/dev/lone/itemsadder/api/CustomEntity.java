@@ -88,6 +88,51 @@ public class CustomEntity
      * Spawns a CustomEntity and returns the created CustomEntity instance, or null if Namespace and ID are invalid.
      *
      * @param namespacedId Namespace and ID in the format {@code namespace:id} to get the CustomEntity from.
+     * @param location     the Location to spawn the CustomEntity at.
+     * @param frustumCulling if this entity needs to be frozen if not visible by the player.
+     * @param noBase specify if this custom entity doesn't have a Bukkit real entity as base.
+     * @param noHitbox specify if this custom entity bones have the armorstands hitboxes or not.
+     * @return Possibly-null CustomEntity instance.
+     */
+    @Nullable
+    public static CustomEntity spawn(String namespacedId,
+                                     Location location,
+                                     boolean frustumCulling,
+                                     boolean noBase,
+                                     boolean noHitbox)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    /**
+     * Spawns a CustomEntity and returns the created CustomEntity instance, or null if Namespace and ID are invalid.
+     *
+     * @param namespacedId Namespace and ID in the format {@code namespace:id} to get the CustomEntity from.
+     * @param location     the Location to spawn the CustomEntity at.
+     * @param viewers the list of players which can see this entity.
+     * @param frustumCulling if this entity needs to be frozen if not visible by the player.
+     * @param noBase specify if this custom entity doesn't have a Bukkit real entity as base.
+     * @param noHitbox specify if this custom entity bones have the armorstands hitboxes or not.
+     * @param function a function which is executed when the base entity is going to be spawned, executed at the same time of
+     *                 the Spigot API function: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/RegionAccessor.html#spawn%28org.bukkit.Location%2Cjava.lang.Class%2Cboolean%2Corg.bukkit.util.Consumer%29=
+     * @return Possibly-null CustomEntity instance.
+     */
+    @Nullable
+    public static CustomEntity spawn(String namespacedId,
+                                     Location location,
+                                     List<Player> viewers,
+                                     boolean frustumCulling,
+                                     boolean noBase,
+                                     boolean noHitbox,
+                                     @Nullable Consumer<LivingEntity> function)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    /**
+     * Spawns a CustomEntity and returns the created CustomEntity instance, or null if Namespace and ID are invalid.
+     *
+     * @param namespacedId Namespace and ID in the format {@code namespace:id} to get the CustomEntity from.
      * @param bukkitEntity the Bukkit entity you want to convert.
      * @return Possibly-null CustomEntity instance.
      */
@@ -110,6 +155,28 @@ public class CustomEntity
     public static CustomEntity convert(String namespacedId,
                                        LivingEntity bukkitEntity,
                                        boolean frustumCulling)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    /**
+     * Spawns a CustomEntity and returns the created CustomEntity instance, or null if Namespace and ID are invalid.
+     *
+     * @param namespacedId Namespace and ID in the format {@code namespace:id} to get the CustomEntity from.
+     * @param bukkitEntity the Bukkit entity you want to convert.
+     * @param frustumCulling if this entity needs to be frozen if not visible by the player.
+     * @param noHitbox specify if this custom entity bones have the armorstands hitboxes or not.
+     * @param canBaseEntityBeDestroyed if the base Bukkit entity can be destroyed if the custom entities dies/is removed.
+     * @param hideBaseEntity if the base Bukkit entity must be hidden on the client or not.
+     * @return Possibly-null CustomEntity instance.
+     */
+    @Nullable
+    public static CustomEntity convert(String namespacedId,
+                                       LivingEntity bukkitEntity,
+                                       boolean frustumCulling,
+                                       boolean noHitbox,
+                                       boolean canBaseEntityBeDestroyed,
+                                       boolean hideBaseEntity)
     {
         throw new NotActuallyItemsAdderException();
     }
@@ -443,6 +510,16 @@ public class CustomEntity
     }
 
     /**
+     * @param name bone name
+     * @return {@link Bone} at the specified name. Returns null if not found.
+     */
+    @Nullable
+    public Bone getBone(String name)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    /**
      * Gets the {@link MountBone} currently ridden by the specified passenger if so
      *
      * @param passenger passenger to check
@@ -456,6 +533,15 @@ public class CustomEntity
 
     public static class Bone
     {
+        /**
+         * Get the name of this bone.
+         * @return the name of the bone.
+         */
+        public String getName()
+        {
+            throw new NotActuallyItemsAdderException();
+        }
+
         /**
          * @return the number of the bone as it is specified within the {@link CustomEntity}.
          * The number remains the same for the same bone independent of {@link CustomEntity} instances if
@@ -477,7 +563,9 @@ public class CustomEntity
         }
 
         /**
-         * @return current bone location in the world
+         * Get the current bone location in the world.
+         *
+         * @return current bone location in the world.
          */
         public Location getLocation()
         {
