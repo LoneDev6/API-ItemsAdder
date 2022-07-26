@@ -2,27 +2,14 @@ package dev.lone.itemsadder.api.Events;
 
 import dev.lone.itemsadder.api.NotActuallyItemsAdderException;
 import org.bukkit.entity.Player;
-import org.bukkit.event.Cancellable;
 import org.bukkit.event.HandlerList;
 import org.jetbrains.annotations.NotNull;
 
-public class FurnitureInteractEvent extends FurnitureEvent implements Cancellable
+public class FurniturePlaceSuccessEvent extends FurnitureEvent
 {
-    public FurnitureInteractEvent(@NotNull Player who)
+    public FurniturePlaceSuccessEvent(@NotNull Player who)
     {
         super(who);
-        throw new NotActuallyItemsAdderException();
-    }
-
-    @Override
-    public boolean isCancelled()
-    {
-        throw new NotActuallyItemsAdderException();
-    }
-
-    @Override
-    public void setCancelled(boolean cancelled)
-    {
         throw new NotActuallyItemsAdderException();
     }
 
