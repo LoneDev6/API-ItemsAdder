@@ -192,26 +192,6 @@ public class CustomStack
     }
 
     /**
-     * Gets the cooldown in milliseconds for this CustomStack's events.
-     *
-     * @return long representing the events cooldown of the CustomStack in milliseconds.
-     */
-    public long getCooldownEventsMs()
-    {
-        throw new NotActuallyItemsAdderException();
-    }
-
-    /**
-     * Returns whether this CustomStack has a events cooldown applied.
-     *
-     * @return true if the CustomStack has a events cooldown applied, otherwise false.
-     */
-    public boolean hasEventsCooldown()
-    {
-        throw new NotActuallyItemsAdderException();
-    }
-
-    /**
      * Returns whether this CustomStack has a usages attribute applied.
      *
      * @return true if the CustomStack has a usage attribute applied, otherwise false.
