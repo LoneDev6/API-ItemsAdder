@@ -448,5 +448,17 @@ public class ItemsAdder
         {
             ItemStack call(String namespacedId, ItemStack par);
         }
+
+        /**
+         * Returns the model path of the specified item in the Minecraft ResourceLocation format
+         * {@code namespace:path}
+         * @param namespacedId the Id of the item you want to get the model of in the format {@code namespace:id}
+         * @return the ResourceLocation.
+         */
+        @Nullable
+        public static String getItemModelResourceLocation(String namespacedId)
+        {
+            throw new NotActuallyItemsAdderException();
+        }
     }
 }
