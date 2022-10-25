@@ -5,6 +5,7 @@ import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
 import org.bukkit.util.Consumer;
 import org.jetbrains.annotations.Nullable;
 
@@ -527,6 +528,21 @@ public class CustomEntity
      */
     @Nullable
     public MountBone getMountBoneByPassenger(LivingEntity passenger)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    public List<ItemStack> getLoot()
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    public List<ItemStack> getLoot(@Nullable ItemStack tool)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    public static List<ItemStack> getLoot(LivingEntity bukkitEntity, @Nullable ItemStack tool)
     {
         throw new NotActuallyItemsAdderException();
     }
