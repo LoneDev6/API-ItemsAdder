@@ -8,6 +8,11 @@ This repository only serves the point of providing access to the method signatur
 </h3>
 <hr> 
 
+# ⚠️ Important
+
+When you use the API it's very important to listen to the [ItemsAdderLoadDataEvent](https://github.com/LoneDev6/API-ItemsAdder/blob/master/src/main/java/dev/lone/itemsadder/api/Events/ItemsAdderLoadDataEvent.java) event in order to make sure items are correctly loaded before accessing them.
+ItemsAdder loading is async, that's why.
+
 ## 📦 Packages
 You can find an overview of all packages here:<br>
 https://github.com/LoneDev6/API-ItemsAdder/packages/
