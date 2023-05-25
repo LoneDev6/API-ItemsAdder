@@ -403,6 +403,18 @@ public class ItemsAdder
     }
 
     /**
+     * Retrieve the resourcepack direct download URL.
+     *
+     * @param appendHash append the hash to the URL or not.
+     * @return returns the URL if is available, null if the resourcepack is still generating or the plugin still loading.
+     */
+    @Nullable
+    public static String getPackUrl(boolean appendHash)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    /**
      * Advanced stuff, better not touch it.
      */
     public static class Advanced
