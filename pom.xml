@@ -8,7 +8,7 @@
 
     <groupId>dev.lone</groupId>
     <artifactId>api-itemsadder</artifactId>
-    <version>3.4.1e</version>
+    <version>3.5.0b</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

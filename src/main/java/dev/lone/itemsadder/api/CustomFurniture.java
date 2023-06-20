@@ -101,13 +101,36 @@ public class CustomFurniture extends CustomStack
     }
 
     /**
+     * Replace the model of this furniture with the model of another furniture.
+     *
+     * @param newFurnitureNamespacedId the namespace and ID of the new furniture model.
+     */
+    public void replaceFurniture(String newFurnitureNamespacedId)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    /**
+     * Gets the Armor stand associated with this CustomFurniture.
+     * <br>This may return null if the Armor stand is not yet spawned in the world.
+     *
+     * @return Possibly-null Bukkit Entity instance.
+     * @deprecated use {@link CustomFurniture#getEntity()} instead.
+     */
+    @Nullable
+    public Entity getArmorstand()
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    /**
      * Gets the Armor stand associated with this CustomFurniture.
      * <br>This may return null if the Armor stand is not yet spawned in the world.
      *
      * @return Possibly-null Bukkit Entity instance.
      */
     @Nullable
-    public Entity getArmorstand()
+    public Entity getEntity()
     {
         throw new NotActuallyItemsAdderException();
     }
