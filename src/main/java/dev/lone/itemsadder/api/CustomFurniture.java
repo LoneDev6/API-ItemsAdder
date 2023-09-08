@@ -25,6 +25,19 @@ public class CustomFurniture extends CustomStack
     }
 
     /**
+     * Gets a CustomFurniture instance from the provided Block.
+     * <br>This may return null if the Block is not part of a furniture hit-box.
+     *
+     * @param block The Block to get the CustomFurniture from.
+     * @return Possibly-null instance of CustomFurniture
+     */
+    @Nullable
+    public static CustomFurniture byAlreadySpawned(Block block)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    /**
      * Spawns an Armor stand with the furniture of the provided namespace and ID at the provided location and
      * returns a CustomFurniture instance for it.
      *
