@@ -240,6 +240,21 @@ public class ItemsAdder
     /**
      * Please use {@link CustomStack} instead.
      * <p>
+     * Set the custom durability of a custom item.
+     *
+     * @param item       Custom item.
+     * @param maxDurability Max durability to set.
+     * @return The modified ItemStack.
+     */
+    @Deprecated
+    public static ItemStack setCustomItemMaxDurability(ItemStack item, int maxDurability)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    /**
+     * Please use {@link CustomStack} instead.
+     * <p>
      * Get the custom durability of a custom item.
      *
      * @param itemStack Custom item.

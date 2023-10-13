@@ -262,6 +262,16 @@ public class CustomStack
     }
 
     /**
+     * Sets the custom max durability of this CustomStack to the provided integer.
+     *
+     * @param maxDurability The max durability to set for this CustomStack.
+     */
+    public void setMaxDurability(int maxDurability)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    /**
      * Gets the maximum custom durability of this CustomStack.
      *
      * @return Integer representing the total custom durability of the CustomStack.

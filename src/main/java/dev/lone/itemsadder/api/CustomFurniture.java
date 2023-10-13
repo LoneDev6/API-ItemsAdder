@@ -1,5 +1,6 @@
 package dev.lone.itemsadder.api;
 
+import org.bukkit.Color;
 import org.bukkit.Location;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Entity;
@@ -119,6 +120,47 @@ public class CustomFurniture extends CustomStack
      * @param newFurnitureNamespacedId the namespace and ID of the new furniture model.
      */
     public void replaceFurniture(String newFurnitureNamespacedId)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    /**
+     * Replace the model of this furniture with the model of another furniture.
+     *
+     * @param newFurnitureNamespacedId the namespace and ID of the new furniture model.
+     * @param color the new color of this furniture. Will apply only to naturally colorable items.
+     */
+    public void replaceFurniture(String newFurnitureNamespacedId, Color color)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    /**
+     * Replace color of this furniture. Will apply only to naturally colorable items.
+     *
+     * @param color the new color of this furniture. Will apply only to naturally colorable items.
+     */
+    public void setColor(Color color)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    /**
+     * Returns the original light level of this CustomFurniture.
+     *
+     * @return Integer representing the original light level of the CustomFurniture.
+     */
+    public int getOriginalLightLevel()
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    /**
+     * Sets the current light level for this CustomFurniture.
+     *
+     * @param level The light level to set for this CustomFurniture.
+     */
+    public void setCurrentLightLevel(int level)
     {
         throw new NotActuallyItemsAdderException();
     }
