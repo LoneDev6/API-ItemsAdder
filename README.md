@@ -44,7 +44,7 @@ In your **&lt;dependencies&gt;** section (Replace `VERSION` with the [latest rel
 <dependency>
     <groupId>com.github.LoneDev6</groupId>
     <artifactId>api-itemsadder</artifactId>
-    <version>VERSION</version>
+    <version>3.6.1</version>
     <scope>provided</scope>
 </dependency>
 ```
@@ -64,7 +64,7 @@ In your **&lt;dependencies&gt;** section (Replace `VERSION` with the [latest rel
 <dependency>
     <groupId>dev.lone</groupId>
     <artifactId>api-itemsadder</artifactId>
-    <version>VERSION</version>
+    <version>3.6.1</version>
     <scope>provided</scope>
 </dependency>
 ```
@@ -87,7 +87,7 @@ repositories {
 Artifact (Replace `VERSION` with the [latest release](https://github.com/LoneDev6/API-ItemsAdder/packages?ecosystem=maven) of this package):
 ```gradle
 dependencies {
-    compileOnly 'dev.lone:api-itemsadder:VERSION'
+    compileOnly 'dev.lone:api-itemsadder:3.6.1'
 }
 ```
 
@@ -107,7 +107,7 @@ repositories {
 Artifact (Replace `VERSION` with the [latest release](https://github.com/LoneDev6/API-ItemsAdder/packages?ecosystem=maven) of this package):
 ```gradle
 dependencies {
-    compileOnly 'com.github.LoneDev6:API-ItemsAdder:VERSION'
+    compileOnly 'com.github.LoneDev6:API-ItemsAdder:3.6.1'
 }
 ```
 
