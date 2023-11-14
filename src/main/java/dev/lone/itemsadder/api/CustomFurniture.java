@@ -6,12 +6,23 @@ import org.bukkit.block.Block;
 import org.bukkit.entity.Entity;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.Set;
+
 /**
  * Class representing a CustomFurniture of ItemsAdder.
  * <br>This class extends the {@link CustomStack} class.
  */
 public class CustomFurniture extends CustomStack
 {
+    /**
+     * Returns a list of all the registered furniture identifiers in the format {@code namespace:id}
+     * @return a list of Namespaces and IDs in the format {@code namespace:id}
+     */
+    public static Set<String> getNamespacedIdsInRegistry()
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
     /**
      * Gets a CustomFurniture instance from the provided Armor stand.
      * <br>This may return null if the Armor stand is not part of a furniture.
