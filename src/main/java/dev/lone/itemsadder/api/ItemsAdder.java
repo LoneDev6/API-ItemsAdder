@@ -358,6 +358,26 @@ public class ItemsAdder
     }
 
     /**
+     * Check if a custom item has keep_on_death behaviour enabled.
+     * @param itemStack the custom item
+     * @return true if it has 'keep_on_death: true', false if not or if it's not a custom item
+     */
+    public static boolean hasKeepOnDeath(ItemStack itemStack)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    /**
+     * Check if a custom item has keep_on_death behaviour enabled.
+     * @param namespacedId Namespace and ID in the format {@code namespace:id} of the custom item
+     * @return true if it has 'keep_on_death: true', false if not or if it's not a custom item
+     */
+    public static boolean hasKeepOnDeath(String namespacedId)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    /**
      * Applies the Resource pack set for ItemsAdder to the provided player.
      *
      * @param player The player to apply the resource pack to.
