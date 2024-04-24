@@ -1,5 +1,6 @@
 package dev.lone.itemsadder.api;
 
+import org.bukkit.Chunk;
 import org.bukkit.Location;
 import org.bukkit.block.Block;
 import org.bukkit.block.data.BlockData;
@@ -8,7 +9,9 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
+import java.util.function.BiConsumer;
 
 /**
  * Class representing a custom block in ItemsAdder.
@@ -378,6 +381,33 @@ public class CustomBlock extends CustomStack
          * the block wasn't custom (wasn't in the custom region file).
          */
         public static boolean removeFromCustomRegion(Location location)
+        {
+            throw new NotActuallyItemsAdderException();
+        }
+
+        public static void deleteAllCustomBlocksInChunk(Chunk chunk)
+        {
+            throw new NotActuallyItemsAdderException();
+        }
+
+        public static void deleteAllCustomBlocksInChunk(Chunk chunk, boolean removeVanillaBlock, boolean sendChunkPacket)
+        {
+            throw new NotActuallyItemsAdderException();
+        }
+
+        @Nullable
+        public static List<Location> getAllBlocksLocationsList(Chunk chunk)
+        {
+            throw new NotActuallyItemsAdderException();
+        }
+
+        @Nullable
+        public static Map<Location, String> getAllBlocksLocations(Chunk chunk)
+        {
+            throw new NotActuallyItemsAdderException();
+        }
+
+        public static void runActionOnBlocks(Chunk chunk, BiConsumer<String, Location> action)
         {
             throw new NotActuallyItemsAdderException();
         }
