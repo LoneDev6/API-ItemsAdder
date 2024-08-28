@@ -8,7 +8,7 @@
 
     <groupId>dev.lone</groupId>
     <artifactId>api-itemsadder</artifactId>
-    <version>3.6.3-beta-14</version>
+    <version>4.0.2-alpha-test-8</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -26,6 +26,11 @@
         <repository>
             <id>spigot-repo</id>
             <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+        </repository>
+        <!--LoneLibs-->
+        <repository>
+            <id>matteodev</id>
+            <url>https://www.matteodev.it/spigot/public/maven/</url>
         </repository>
     </repositories>
 
@@ -75,7 +80,6 @@
         </plugins>
     </build>
 
-    <!-- Our dependencies -->
     <dependencies>
         <dependency>
             <groupId>org.spigotmc</groupId>
@@ -83,6 +87,21 @@
             <version>1.14.4-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
+
+        <!-- Paper Only -->
+        <dependency>
+            <groupId>net.kyori</groupId>
+            <artifactId>adventure-api</artifactId>
+            <version>4.17.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>dev.lone</groupId>
+            <artifactId>LoneLibs</artifactId>
+            <version>1.0.57</version>
+            <scope>provided</scope>
+        </dependency>
+
         <dependency>
             <groupId>org.jetbrains</groupId>
             <artifactId>annotations</artifactId>
