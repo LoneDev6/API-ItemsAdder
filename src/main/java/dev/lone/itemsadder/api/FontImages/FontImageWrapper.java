@@ -53,7 +53,7 @@ public class FontImageWrapper
      * @param string String you want to get placeholders replaced.
      * @return String with placeholders replaced with unicode characters.
      */
-    public static String replaceFontImages(Player player, String string)
+    public static String replaceFontImages(Permissible player, String string)
     {
         throw new NotActuallyItemsAdderException();
     }
