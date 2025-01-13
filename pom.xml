@@ -98,7 +98,7 @@
         <dependency>
             <groupId>dev.lone</groupId>
             <artifactId>LoneLibs</artifactId>
-            <version>1.0.57</version>
+            <version>1.0.62</version>
             <scope>provided</scope>
         </dependency>
 
