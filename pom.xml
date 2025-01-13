@@ -30,15 +30,14 @@
         <!--LoneLibs-->
         <repository>
             <id>matteodev</id>
-            <url>http://www.matteodev.it/spigot/public/maven/</url>
+            <url>https://www.matteodev.it/spigot/public/maven/</url>
         </repository>
     </repositories>
 
     <distributionManagement>
         <repository>
-            <id>github</id>
-            <name>GitHub Packages</name>
-            <url>https://maven.pkg.github.com/LoneDev6/API-ItemsAdder</url>
+            <id>ftp-matteodev</id>
+            <url>ftp://ftp.matteodev.it/htdocs/spigot/public/maven/</url>
         </repository>
     </distributionManagement>
 
@@ -47,6 +46,14 @@
         <defaultGoal>clean package</defaultGoal>
 
         <finalName>${project.name} v${project.version}</finalName>
+
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-ftp</artifactId>
+                <version>3.5.2</version>
+            </extension>
+        </extensions>
 
         <plugins>
             <!-- Compiler plugin -->
