@@ -30,11 +30,3 @@ jobs:
         java-version: 8
     - name: Build with Maven
       run: mvn package --file pom.xml
-    - name: Deploy Javadoc
-      uses: MathieuSoysal/publish-javadoc@v2.3.0
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        javadoc-branche: javadoc
-        java-version: 8
-        target-folder: javadoc
-        java-distribution: zulu
