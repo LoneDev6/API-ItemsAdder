@@ -34,7 +34,7 @@ In your **&lt;dependencies&gt;** section (To find the latest version checkl the 
 ```
 
 ## LoneLibs
-[How to install](https://github.com/LoneDev6/LoneLibs)
+[How to install](https://github.com/JavaPlugins/LoneLibs)
 
 ---
 
