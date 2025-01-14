@@ -19,7 +19,7 @@ To build your project against this library, simply include one of the following 
 ```xml
  <repository>
     <id>matteodev</id>
-    <url>https://www.matteodev.it/spigot/public/maven/</url>
+    <url>https://maven.devs.beer/</url>
 </repository>
 ```
 
