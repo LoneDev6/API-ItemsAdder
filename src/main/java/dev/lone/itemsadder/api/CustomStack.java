@@ -290,7 +290,7 @@ public class CustomStack
      *
      * <p>Not all attributes are available on all Minecraft versions!
      *
-     * <h3>Example</h3>
+     * <h2>Example</h2>
      * <pre><code>
      * item.setAttributeModifier("attack_damage", "mainhand", 10d);
      * </code></pre>
