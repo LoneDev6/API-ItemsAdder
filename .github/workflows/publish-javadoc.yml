@@ -17,4 +17,3 @@ jobs:
           java-version: 17
           target-folder: javadoc
           project: maven
-          custom-command: javadoc -d target/site/apidocs -sourcepath src/main/java -subpackages . -Xdoclint:none
