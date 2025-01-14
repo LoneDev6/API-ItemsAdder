@@ -1,18 +1,30 @@
-name: Deploy Javadoc
-
+name: Publish Javadoc
 on:
   push:
     branches:
       - master
+    paths:
+      - 'src/**'
+      - 'pom.xml'
 
 jobs:
-  publish:
+  publish-javadoc:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write  # if you have a protection rule on your repository, you'll need to give write permission to the workflow.
     steps:
-      - name: Deploy JavaDoc 🚀
-        uses: MathieuSoysal/Javadoc-publisher.yml@v2.5.0
+      - uses: actions/checkout@v3
+
+      - name: Set up JDK
+        uses: actions/setup-java@v3
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          java-version: 17
+          java-version: '8'
+          distribution: 'zulu'
+
+      - name: Generate Javadoc
+        run: mvn javadoc:javadoc
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./target/site/apidocs
+          publish_branch: javadoc
