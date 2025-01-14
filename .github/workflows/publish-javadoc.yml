@@ -9,20 +9,7 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Set up Java 17
-        uses: actions/setup-java@v3
-        with:
-          java-version: 17
-
-      - name: Build with Maven and Generate Javadoc
-        run: |
-          mvn clean install javadoc:javadoc -DadditionalJOption="-Xdoclint:none"
-          ls -l target/site/apidocs
-
-      - name: Deploy Javadoc 🚀
+      - name: Deploy JavaDoc 🚀
         uses: MathieuSoysal/Javadoc-publisher.yml@v2.3.0
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -30,3 +17,4 @@ jobs:
           java-version: 17
           target-folder: javadoc
           project: maven
+          custom-command: javadoc -d target/site/apidocs -sourcepath src/main/java -subpackages . -Xdoclint:none
