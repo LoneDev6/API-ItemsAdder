@@ -26,7 +26,7 @@ To build your project against this library, simply include one of the following 
 In your **&lt;dependencies&gt;** section (To find the latest version checkl the [latest release](https://github.com/LoneDev6/API-ItemsAdder/releases) name):
 ```xml
 <dependency>
-    <groupId>com.github.LoneDev6</groupId>
+    <groupId>dev.lone</groupId>
     <artifactId>api-itemsadder</artifactId>
     <version>4.0.2-beta-release-11</version>
     <scope>provided</scope>
@@ -58,7 +58,7 @@ This API requires LoneLibs to be added to your dependencies.
 <dependency>
     <groupId>dev.lone</groupId>
     <artifactId>LoneLibs</artifactId>
-    <version>1.0.58</version>
+    <version>1.0.63</version>
     <scope>provided</scope>
 </dependency>
 ```
