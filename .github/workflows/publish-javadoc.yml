@@ -1,11 +1,9 @@
-name: Publish Javadoc
+name: Deploy Javadoc
+
 on:
   push:
     branches:
       - master
-    paths:
-      - 'src/**'
-      - 'pom.xml'
 
 jobs:
   publish-javadoc:
