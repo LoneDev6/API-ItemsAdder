@@ -10,6 +10,9 @@ import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.meta.ItemMeta;
 
+/**
+ * Class containing examples of how to use ItemsAdder API.
+ */
 public class Examples implements Listener
 {
     @EventHandler
