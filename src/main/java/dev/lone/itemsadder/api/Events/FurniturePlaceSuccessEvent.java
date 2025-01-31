@@ -5,6 +5,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.HandlerList;
 import org.jetbrains.annotations.NotNull;
 
+@Deprecated
 public class FurniturePlaceSuccessEvent extends FurnitureEvent
 {
     public FurniturePlaceSuccessEvent(@NotNull Player who)

@@ -1,6 +1,7 @@
 package dev.lone.itemsadder.api.Events;
 
 import dev.lone.itemsadder.api.NotActuallyItemsAdderException;
+import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Cancellable;
 import org.bukkit.event.HandlerList;
@@ -9,17 +10,12 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 /**
- * Event called when a player tries to place a furniture item.
+ * Called before placing, to avoid useless processing.
+ * Exposes the `namespacedId` and `location` of the entity for checking.
  */
-@Deprecated
-public class FurniturePlaceEvent extends PlayerEvent implements Cancellable
+public class FurniturePrePlaceEvent extends PlayerEvent implements Cancellable
 {
-    /**
-     * Constructor of the event
-     *
-     * @param who Player who is trying to place the item.
-     */
-    public FurniturePlaceEvent(@NotNull Player who)
+    public FurniturePrePlaceEvent(@NotNull Player who)
     {
         super(who);
         throw new NotActuallyItemsAdderException();
@@ -59,21 +55,21 @@ public class FurniturePlaceEvent extends PlayerEvent implements Cancellable
     }
 
     /**
-     * Gets the handler list of this event.
+     * Gets the location where the entity would be placed.
      *
-     * @return Handler list of this event.
+     * @return Location where the entity would be placed.
      */
+    public Location getLocation()
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
     @NotNull
     public HandlerList getHandlers()
     {
         throw new NotActuallyItemsAdderException();
     }
 
-    /**
-     * Static utility method to get the handler list of this event.
-     *
-     * @return Handler list of this event.
-     */
     @NotNull
     public static HandlerList getHandlerList()
     {
