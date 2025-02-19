@@ -1,9 +1,8 @@
 package dev.lone.itemsadder.api.FontImages;
 
 import dev.lone.itemsadder.api.NotActuallyItemsAdderException;
-import lonelibs.net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.Component;
 import org.bukkit.ChatColor;
-import org.bukkit.entity.Player;
 import org.bukkit.permissions.Permissible;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -37,24 +36,11 @@ public class FontImageWrapper
     /**
      * Static utility method to replace all the font images placeholders in a Component.
      *
-     * @param adventureComponentLoneLibs Component you want to get placeholders replaced.
-     * @return Component with placeholders replaced with unicode characters.
-     * @throws NotActuallyItemsAdderException Always thrown to indicate this is a placeholder.
-     */
-    @NotNull
-    public static Component replaceFontImages(Component adventureComponentLoneLibs)
-    {
-        throw new NotActuallyItemsAdderException();
-    }
-
-    /**
-     * Static utility method to replace all the font images placeholders in a Component.
-     *
      * @param adventureComponent Component you want to get placeholders replaced.
      * @return Component with placeholders replaced with unicode characters.
      * @throws NotActuallyItemsAdderException Always thrown to indicate this is a placeholder.
      */
-    public static net.kyori.adventure.text.Component replaceFontImages(net.kyori.adventure.text.Component adventureComponent)
+    public static Component replaceFontImages(Component adventureComponent)
     {
         throw new NotActuallyItemsAdderException();
     }
@@ -75,26 +61,12 @@ public class FontImageWrapper
     /**
      * Static utility method to replace all the font images placeholders in a Component.
      *
-     * @param player                     Player to check permissions to use the placeholders.
-     *                                   Each placeholder permission is checked, and it won't be replaced if the player has no permission to use it.
-     * @param adventureComponentLoneLibs Component you want to get placeholders replaced.
-     * @return Component with placeholders replaced with unicode characters.
-     */
-    @NotNull
-    public static Component replaceFontImages(Permissible player, Component adventureComponentLoneLibs)
-    {
-        throw new NotActuallyItemsAdderException();
-    }
-
-    /**
-     * Static utility method to replace all the font images placeholders in a Component.
-     *
      * @param player             Player to check permissions to use the placeholders.
      * @param adventureComponent Component you want to get placeholders replaced.
      * @return Component with placeholders replaced with unicode characters.
      */
     @NotNull
-    public static net.kyori.adventure.text.Component replaceFontImages(Permissible player, net.kyori.adventure.text.Component adventureComponent)
+    public static Component replaceFontImages(Permissible player, Component adventureComponent)
     {
         throw new NotActuallyItemsAdderException();
     }
