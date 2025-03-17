@@ -14,6 +14,9 @@ This repository only serves the point of providing access to the method signatur
 
 
 ## ItemsAdder
+![maven release](https://img.shields.io/badge/dynamic/xml?url=https%3A%2F%2Fmaven.devs.beer%2Fdev%2Flone%2Fapi-itemsadder%2Fmaven-metadata.xml&query=%2F%2Fmetadata%2Fversioning%2Frelease&style=for-the-badge&label=API%20version
+)
+
 To build your project against this library, simply include one of the following references in your `pom.xml`:
 
 ```xml
@@ -23,12 +26,13 @@ To build your project against this library, simply include one of the following 
 </repository>
 ```
 
-In your **&lt;dependencies&gt;** section (To find the latest version checkl the [latest release](https://github.com/LoneDev6/API-ItemsAdder/releases) name):
+In your **&lt;dependencies&gt;** section (To find the latest version check the badge above):
 ```xml
 <dependency>
     <groupId>dev.lone</groupId>
     <artifactId>api-itemsadder</artifactId>
-    <version>4.0.2-beta-release-11</version>
+    <!-- Replace {version} with the latest version -->
+    <version>{version}</version>
     <scope>provided</scope>
 </dependency>
 ```
