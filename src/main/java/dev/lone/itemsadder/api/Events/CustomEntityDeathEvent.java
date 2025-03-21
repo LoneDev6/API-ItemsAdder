@@ -1,7 +1,8 @@
 package dev.lone.itemsadder.api.Events;
 
 import dev.lone.itemsadder.api.NotActuallyItemsAdderException;
-import org.bukkit.entity.Entity;
+import org.bukkit.entity.LivingEntity;
+import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 import org.jetbrains.annotations.NotNull;
@@ -12,7 +13,7 @@ import org.jetbrains.annotations.Nullable;
  */
 public class CustomEntityDeathEvent extends Event
 {
-    public CustomEntityDeathEvent(Entity entity, Object internal)
+    public CustomEntityDeathEvent(LivingEntity entity, Object internal)
     {
         throw new NotActuallyItemsAdderException();
     }
@@ -44,7 +45,7 @@ public class CustomEntityDeathEvent extends Event
      *
      * @return The Bukkit Entity associated with the CustomMob.
      */
-    public Entity getEntity()
+    public LivingEntity getEntity()
     {
         throw new NotActuallyItemsAdderException();
     }
@@ -55,7 +56,7 @@ public class CustomEntityDeathEvent extends Event
      * @return Possibly-null Bukkit Entity, it's very unlikely to be tho. It happens only if the CustomMob is misconfigured.
      */
     @Nullable
-    public Entity getKiller()
+    public Player getKiller()
     {
         throw new NotActuallyItemsAdderException();
     }
