@@ -27,11 +27,6 @@
             <id>spigot-repo</id>
             <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
         </repository>
-        <!--LoneLibs-->
-        <repository>
-            <id>matteodev</id>
-            <url>https://maven.devs.beer/</url>
-        </repository>
     </repositories>
 
     <distributionManagement>
@@ -110,13 +105,6 @@
             <groupId>net.kyori</groupId>
             <artifactId>adventure-api</artifactId>
             <version>4.17.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>dev.lone</groupId>
-            <artifactId>LoneLibs</artifactId>
-            <version>1.0.62</version>
-            <scope>provided</scope>
         </dependency>
 
         <dependency>

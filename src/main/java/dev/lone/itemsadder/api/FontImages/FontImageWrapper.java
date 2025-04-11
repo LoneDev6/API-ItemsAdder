@@ -2,10 +2,14 @@ package dev.lone.itemsadder.api.FontImages;
 
 import dev.lone.itemsadder.api.NotActuallyItemsAdderException;
 import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.format.TextColor;
 import org.bukkit.ChatColor;
 import org.bukkit.permissions.Permissible;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.Map;
+import java.util.Set;
 
 /**
  * Class representing ItemAdder custom images feature.
@@ -18,6 +22,21 @@ public class FontImageWrapper
      * @param namespacedID
      */
     public FontImageWrapper(String namespacedID)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    public static FontImageWrapper instance(String namespacedID)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    public static Set<String> getNamespacedIdsInRegistry()
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    public static Map<String, String> getNamespacedIdsAndValueInRegistry()
     {
         throw new NotActuallyItemsAdderException();
     }
@@ -151,6 +170,7 @@ public class FontImageWrapper
      * @return A copy of the font_image String with pixel offset applied to it.
      * Doesn't modify the original one.
      */
+    @Deprecated
     public String applyPixelsOffset(int offset)
     {
         throw new NotActuallyItemsAdderException();
@@ -161,7 +181,7 @@ public class FontImageWrapper
      *
      * @return Text color of this wrapper.
      */
-    public ChatColor getColor()
+    public TextColor getColor()
     {
         throw new NotActuallyItemsAdderException();
     }
@@ -171,7 +191,27 @@ public class FontImageWrapper
      *
      * @param color Color to set.
      */
-    public void setColor(ChatColor color)
+    public FontImageWrapper setColor(TextColor color)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    /**
+     * Set color of this wrapper.
+     *
+     * @param bukkitChatColor Color to set.
+     */
+    public FontImageWrapper setColor(ChatColor bukkitChatColor)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    public FontImageWrapper setOffset(int offset)
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    public int getOffset()
     {
         throw new NotActuallyItemsAdderException();
     }
