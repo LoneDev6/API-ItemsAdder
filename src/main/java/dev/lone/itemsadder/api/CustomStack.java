@@ -1,5 +1,6 @@
 package dev.lone.itemsadder.api;
 
+import net.kyori.adventure.text.Component;
 import org.bukkit.Location;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.inventory.ItemStack;
@@ -320,6 +321,11 @@ public class CustomStack
      * @return String representing the display name of the CustomStack.
      */
     public String getDisplayName()
+    {
+        throw new NotActuallyItemsAdderException();
+    }
+
+    public Component itemName()
     {
         throw new NotActuallyItemsAdderException();
     }
