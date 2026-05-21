@@ -14,23 +14,15 @@ This repository only serves the point of providing access to the method signatur
 
 
 ## ItemsAdder
-![maven release](https://img.shields.io/badge/dynamic/xml?url=https%3A%2F%2Fmaven.devs.beer%2Fdev%2Flone%2Fapi-itemsadder%2Fmaven-metadata.xml&query=%2F%2Fmetadata%2Fversioning%2Frelease&style=for-the-badge&label=API%20version
-)
+![ItemsAdder API](https://img.shields.io/badge/dynamic/xml?url=https%3A%2F%2Frepo1.maven.org%2Fmaven2%2Fbeer%2Fdevs%2Fitemsadder-api%2Fmaven-metadata.xml&query=%2Fmetadata%2Fversioning%2Flatest&label=&color=blue)
 
 To build your project against this library, simply include one of the following references in your `pom.xml`:
-
-```xml
- <repository>
-    <id>matteodev</id>
-    <url>https://maven.devs.beer/</url>
-</repository>
-```
 
 In your **&lt;dependencies&gt;** section (To find the latest version check the badge above):
 ```xml
 <dependency>
-    <groupId>dev.lone</groupId>
-    <artifactId>api-itemsadder</artifactId>
+    <groupId>beer.devs</groupId>
+    <artifactId>itemsadder-api</artifactId>
     <!-- Replace {version} with the latest version -->
     <version>{version}</version>
     <scope>provided</scope>
