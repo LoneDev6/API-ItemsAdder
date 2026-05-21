@@ -19,6 +19,8 @@ This repository only serves the point of providing access to the method signatur
 To build your project against this library, simply include one of the following references in your `pom.xml`:
 
 In your **&lt;dependencies&gt;** section (To find the latest version check the badge above):
+
+### Maven
 ```xml
 <dependency>
     <groupId>beer.devs</groupId>
@@ -27,6 +29,13 @@ In your **&lt;dependencies&gt;** section (To find the latest version check the b
     <version>{version}</version>
     <scope>provided</scope>
 </dependency>
+```
+
+### Gradle
+```kotlin
+dependencies {
+    compileOnly("beer.devs:itemsadder-api:{version}")
+}
 ```
 
 ---
