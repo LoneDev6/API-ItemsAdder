@@ -4,7 +4,7 @@ This repository only provides access to the Java API method signatures of ItemsA
 
 > [!IMPORTANT]
 > This repository does **NOT** contain the source code of ItemsAdder.  
-> To use and test this API you still need a valid copy of :contentReference[oaicite:0]{index=0}.
+> To use and test this API you still need a valid copy of [ItemsAdder](https://itemsadder.com/).
 
 <h3 align="center">
 <a href="https://itemsadder.devs.beer/developers/java-api">☕ Java documentation</a> |
